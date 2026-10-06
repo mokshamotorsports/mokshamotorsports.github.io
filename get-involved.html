@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join Moksha Motorsports — Application Portal</title>
+  <meta name="description"
+    content="Apply to join Moksha Motorsports at IIT Gandhinagar. Build, learn, and race with our student BAJA SAE team.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="assets/moksha-logo.png">
+</head>
+
+<body>
+
+  <a href="#content" class="skip-link">Skip to Content</a>
+
+  <!-- NAVBAR -->
+  <header class="navbar" role="banner">
+    <a href="index.html" class="nav-brand" aria-label="Moksha Motorsports Home">
+      <img src="assets/moksha-logo.png" alt="Moksha Motorsports Logo" class="nav-logo">
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="nav-links" aria-label="Main Navigation">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="team.html" class="nav-link">Team</a>
+      <a href="partners.html" class="nav-link">Partners</a>
+      <a href="alumni-donors.html" class="nav-link">Alumni</a>
+      <a href="about.html" class="nav-link">About Us</a>
+    </nav>
+
+    <!-- Mobile Navigation Toggle -->
+    <button class="nav-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <!-- Mobile Overlay Menu -->
+  <div class="nav-mobile-menu" aria-hidden="true">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="team.html" class="nav-link">Team</a>
+    <a href="partners.html" class="nav-link">Partners</a>
+    <a href="alumni-donors.html" class="nav-link">Alumni</a>
+    <a href="about.html" class="nav-link">About Us</a>
+  </div>
+
+  <!-- MAIN CONTENT: SPLIT-SCREEN RECRUITMENT HERO & FORM -->
+  <main id="content" class="portal-page-wrapper">
+    <div class="portal-split-hero">
+
+      <!-- LEFT COLUMN: TEAM / BAJA PHOTO WITH CINEMATIC EDGE BLEND -->
+      <div class="portal-media-col" aria-label="Moksha Motorsports Application">
+        <img src="assets/application-portal.png" alt="Moksha Motorsports Application" class="portal-hero-img">
+        <div class="portal-overlay-fade-left" aria-hidden="true"></div>
+        <div class="portal-overlay-fade-right" aria-hidden="true"></div>
+        <div class="portal-overlay-fade-vertical" aria-hidden="true"></div>
+      </div>
+
+      <!-- RIGHT COLUMN: INTRODUCTION & APPLICATION FORM ON DARK UI -->
+      <div class="portal-form-col">
+        <div class="portal-form-wrapper">
+
+          <!-- PAGE INTRODUCTION -->
+          <div class="portal-intro-header">
+            <h1 class="portal-main-title">JOIN MOKSHA MOTORSPORTS</h1>
+            <h2 class="portal-sub-title">BUILD. LEARN. RACE.</h2>
+            <p class="portal-intro-text">
+              Want to get your hands dirty and be part of something built from the ground up?
+            </p>
+          </div>
+
+          <div class="portal-section-divider" aria-hidden="true"></div>
+
+          <!-- APPLICATION FORM -->
+          <form id="mokshaJoinForm" class="portal-form" novalidate>
+            <h3 class="portal-form-heading">YOUR DETAILS</h3>
+
+            <!-- FULL NAME -->
+            <div class="portal-form-group">
+              <label for="applicantName" class="portal-label">Name <span class="required-asterisk">*</span></label>
+              <input type="text" id="applicantName" name="applicantName" class="portal-input" placeholder="Enter your full name" required>
+              <span class="field-error-msg" id="nameError">Please enter your full name.</span>
+            </div>
+
+            <!-- EMAIL -->
+            <div class="portal-form-group">
+              <label for="applicantEmail" class="portal-label">Email <span class="required-asterisk">*</span></label>
+              <input type="email" id="applicantEmail" name="applicantEmail" class="portal-input" placeholder="Enter your email" required>
+              <span class="field-error-msg" id="emailError">Please enter a valid email address.</span>
+            </div>
+
+            <!-- WHY DO YOU WANT TO JOIN -->
+            <div class="portal-form-group">
+              <label for="applicantMotivation" class="portal-label">Why do you want to join Moksha Motorsports? <span class="required-asterisk">*</span></label>
+              <textarea id="applicantMotivation" name="applicantMotivation" rows="4" class="portal-textarea" placeholder="Tell us a little about yourself and what you'd like to contribute to the team." required></textarea>
+              <span class="field-error-msg" id="motivationError">Please share your motivation for joining.</span>
+            </div>
+
+            <!-- SUBMIT BUTTON -->
+            <div class="portal-submit-wrap">
+              <button type="submit" id="portalSubmitBtn" class="team-btn-primary portal-submit-btn">
+                <span class="btn-text">SUBMIT APPLICATION</span> <span class="arrow">→</span>
+              </button>
+              <p class="portal-footer-note">
+                *We'll review your application and get back to you on your email.*
+              </p>
+            </div>
+
+            <!-- SUCCESS CONFIRMATION ALERT -->
+            <div id="portalSuccessAlert" class="portal-success-alert" style="display: none;">
+              <div class="success-icon">✓</div>
+              <h4 class="success-title">APPLICATION RECEIVED!</h4>
+              <p class="success-body">
+                Thank you for applying to join Moksha Motorsports. We've logged your details and our team will get back to you on your email shortly.
+              </p>
+            </div>
+          </form>
+
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <!-- BRAND COLUMN -->
+        <div class="footer-col footer-brand">
+          <a href="index.html" class="footer-logo-link" aria-label="Moksha Motorsports Home">
+            <img src="assets/moksha-logo.png" alt="Moksha Motorsports Logo" class="footer-logo">
+          </a>
+          <h3 class="footer-brand-name">Moksha Motorsports</h3>
+          <p class="footer-tagline">Eternal Racing</p>
+        </div>
+
+        <!-- QUICK LINKS COLUMN -->
+        <div class="footer-col footer-links-col">
+          <h4 class="footer-col-title">QUICK LINKS</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="team.html" class="footer-link">Team</a></li>
+            <li><a href="partners.html" class="footer-link">Partners</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+          </ul>
+        </div>
+
+        <!-- CONNECT COLUMN -->
+        <div class="footer-col footer-connect-col">
+          <h4 class="footer-col-title">CONNECT</h4>
+          <div class="footer-socials">
+            <a href="https://www.instagram.com/moksha_sae.iitgn?igsh=ZnZyM25kZWNtaHk3" target="_blank"
+              rel="noopener noreferrer" class="social-link" aria-label="Follow Moksha Motorsports on Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+            </a>
+            <a href="https://in.linkedin.com/company/moksha-motorsports" target="_blank" rel="noopener noreferrer"
+              class="social-link" aria-label="Connect with Moksha Motorsports on LinkedIn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </a>
+          </div>
+          <p class="footer-contact-item">
+            <span class="footer-item-label">Email:</span>
+            <a href="mailto:moksha.sae@iitgn.ac.in" class="footer-link">moksha.sae@iitgn.ac.in</a>
+          </p>
+          <p class="footer-contact-item">
+            <span class="footer-item-label">Phone:</span>
+            <a href="tel:+919909982227" class="footer-link">+91 9909982227</a>
+          </p>
+          <p class="footer-address">
+            <span class="footer-item-label">Location:</span><br>
+            AB-11, Maker Bhavan,<br>
+            IIT Gandhinagar, Gujarat – 382355
+          </p>
+        </div>
+      </div>
+
+      <!-- BOTTOM STRIP -->
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; Moksha Motorsports — IIT Gandhinagar</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('mokshaJoinForm');
+      const submitBtn = document.getElementById('portalSubmitBtn');
+      const successAlert = document.getElementById('portalSuccessAlert');
+
+      if (!form) return;
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        // Reset error displays
+        document.querySelectorAll('.field-error-msg').forEach(el => el.style.display = 'none');
+
+        let isValid = true;
+
+        // Name validation
+        const nameInput = document.getElementById('applicantName');
+        if (!nameInput || !nameInput.value.trim()) {
+          const err = document.getElementById('nameError');
+          if (err) err.style.display = 'block';
+          isValid = false;
+        }
+
+        // Email validation
+        const emailInput = document.getElementById('applicantEmail');
+        const emailVal = emailInput ? emailInput.value.trim() : '';
+        if (!emailVal || !emailVal.includes('@')) {
+          const err = document.getElementById('emailError');
+          if (err) err.style.display = 'block';
+          isValid = false;
+        }
+
+        // Motivation validation
+        const motivationInput = document.getElementById('applicantMotivation');
+        if (!motivationInput || !motivationInput.value.trim() || motivationInput.value.trim().length < 5) {
+          const err = document.getElementById('motivationError');
+          if (err) err.style.display = 'block';
+          isValid = false;
+        }
+
+        if (!isValid) {
+          const firstError = document.querySelector('.field-error-msg[style*="block"]');
+          if (firstError && firstError.previousElementSibling) {
+            firstError.previousElementSibling.focus();
+          }
+          return;
+        }
+
+        // Processing / Loading State
+        const btnText = submitBtn.querySelector('.btn-text');
+        const origText = btnText ? btnText.textContent : 'SUBMIT APPLICATION';
+        if (btnText) btnText.textContent = 'SUBMITTING APPLICATION...';
+        submitBtn.disabled = true;
+        submitBtn.style.opacity = '0.7';
+
+        // Simulate submission response
+        setTimeout(() => {
+          form.reset();
+          if (btnText) btnText.textContent = origText;
+          submitBtn.disabled = false;
+          submitBtn.style.opacity = '1';
+
+          if (successAlert) {
+            successAlert.style.display = 'block';
+            successAlert.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        }, 1200);
+      });
+    });
+  </script>
+
+</body>
+
+</html>

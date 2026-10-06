@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Team — Moksha Motorsports Archive</title>
+  <meta name="description"
+    content="Meet the engineers, designers, and leadership driving Moksha Motorsports at IIT Gandhinagar. Electric Mobility & Motorsport Excellence.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="assets/moksha-logo.png">
+</head>
+
+<body>
+
+  <a href="#content" class="skip-link">Skip to Content</a>
+
+  <!-- NAVBAR -->
+  <header class="navbar" role="banner">
+    <a href="index.html" class="nav-brand" aria-label="Moksha Motorsports Home">
+      <img src="assets/moksha-logo.png" alt="Moksha Motorsports Logo" class="nav-logo">
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="nav-links" aria-label="Main Navigation">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="team.html" class="nav-link active">Team</a>
+      <a href="partners.html" class="nav-link">Partners</a>
+      <a href="alumni-donors.html" class="nav-link">Alumni</a>
+      <a href="about.html" class="nav-link">About Us</a>
+    </nav>
+
+    <!-- Mobile Navigation Toggle -->
+    <button class="nav-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <!-- Mobile Overlay Menu -->
+  <div class="nav-mobile-menu" aria-hidden="true">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="team.html" class="nav-link active">Team</a>
+    <a href="partners.html" class="nav-link">Partners</a>
+    <a href="alumni-donors.html" class="nav-link">Alumni</a>
+    <a href="about.html" class="nav-link">About Us</a>
+  </div>
+
+  <!-- MAIN TEAM PAGE CONTENT -->
+  <main id="content" class="team-page-wrapper">
+
+    <!-- 1. HERO SECTION (FULL PAGE WIDTH WITH CINEMATIC BOTTOM FADE) -->
+    <section class="team-hero-section cinematic-hero" aria-label="Team Hero Header">
+      <div class="team-hero-overlay cinematic-hero-overlay" aria-hidden="true"></div>
+      <div class="team-hero-content">
+        <h1 class="team-hero-heading">THE TEAM</h1>
+        <p id="teamHeroSubtitle" class="team-hero-subheading">
+          The people behind the machine
+        </p>
+      </div>
+    </section>
+
+    <!-- 2. ABOUT THE TEAM SECTION (FULL PAGE WIDTH) -->
+    <section class="team-about-section" aria-label="About The Team">
+      <div class="team-about-container">
+        <div class="team-about-header">
+          <h2 class="section-heading">ABOUT THE TEAM</h2>
+        </div>
+        <div class="team-about-content-grid">
+          <div class="team-about-text">
+            <p class="team-about-lead">
+              <strong>Moksha Motorsports</strong> is the official student BAJA SAE team of <strong>IIT
+                Gandhinagar</strong>.
+            </p>
+            <p class="team-about-body">
+              We design, manufacture, and race all-terrain vehicles built to tackle the toughest challenges of off-road
+              motorsport. From chassis and suspension to brakes and powertrain, our team combines engineering, hands-on
+              fabrication, and rigorous testing to build reliable, competition-ready machines.
+            </p>
+            <p class="team-about-body" style="margin-top: 1.25rem; font-weight: 700; color: var(--text-white);">
+              Driven by innovation. Built for the terrain.
+            </p>
+          </div>
+          <div class="team-about-meta-panel">
+            <div class="meta-item">
+              <span class="meta-label">AFFILIATION</span>
+              <span class="meta-value">IIT GANDHINAGAR</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">COMPETITION</span>
+              <span class="meta-value">eBAJA</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">POWERTRAIN</span>
+              <span class="meta-value">100% ELECTRIC (EV)</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">HEADQUARTERS</span>
+              <span class="meta-value">MAKER BHAVAN, IITGN</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAJOR SECTION DIVIDER -->
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <!-- 3. TEAMS SECTION (ROSTER GRID + RIGHT SIDEBAR CONTAINED ONLY IN THIS SECTION) -->
+    <section class="teams-roster-section" aria-label="Teams Roster and Seasons">
+      <div class="teams-section-container">
+
+        <!-- SECTION HEADER -->
+        <div class="teams-section-header">
+          <h2 class="section-heading">TEAMS</h2>
+        </div>
+
+        <!-- TWO COLUMN LAYOUT: MAIN ROSTER (78%) + RIGHT SIDEBAR (22%) -->
+        <div class="teams-layout-grid">
+
+          <!-- MAIN TEAM CONTENT -->
+          <div class="teams-main-content">
+
+            <!-- MOBILE SEASON SELECTOR DROPDOWN (Visible only on Mobile/Tablet) -->
+            <div class="mobile-season-selector-wrap">
+              <span class="mobile-season-label">SEASON</span>
+              <select id="mobileSeasonSelect" class="mobile-season-dropdown" aria-label="Select Season">
+                <option value="current">2026-27</option>
+                <option value="2026">2025-26</option>
+                <option value="2025">2024-25</option>
+              </select>
+            </div>
+
+            <!-- DYNAMIC TEAM CONTENT (FACULTY ADVISORY, CORE TEAM & TEAM MEMBERS) -->
+            <div id="teamDynamicContent" class="team-dynamic-content-wrap">
+
+              <!-- CATEGORY 1: FACULTY ADVISORY -->
+              <div class="team-category-block" aria-label="Faculty Advisory">
+                <h3 class="category-heading">FACULTY ADVISORS</h3>
+                <div id="facultyAdvisorsGrid" class="faculty-advisors-grid">
+                  <!-- Dynamically populated via js/team.js -->
+                </div>
+              </div>
+
+              <!-- CATEGORY 2: CORE TEAM -->
+              <div class="team-category-block" aria-label="Core Team Leadership">
+                <h3 class="category-heading">CORE TEAM</h3>
+                <div id="coreTeamGrid" class="core-team-grid">
+                  <!-- Dynamically populated via js/team.js -->
+                </div>
+              </div>
+
+              <!-- CATEGORY 3: TEAM MEMBERS -->
+              <div class="team-category-block" aria-label="Team Members Roster">
+                <h3 class="category-heading">TEAM MEMBERS</h3>
+                <div id="remainingTeamGrid" class="remaining-team-grid">
+                  <!-- Dynamically populated via js/team.js -->
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- PERSISTENT / STICKY RIGHT SIDEBAR (22% WIDTH, SCOPED ONLY TO TEAMS SECTION) -->
+          <aside class="team-sidebar-col" aria-label="Team Season Navigation">
+            <div class="team-sticky-sidebar">
+              <span class="sidebar-header-label">SEASON</span>
+              <ul class="sidebar-season-menu">
+                <li class="sidebar-season-item active" data-season="current">
+                  <a href="#current" class="sidebar-season-link">
+                    <span class="sidebar-indicator">→</span> 2026-27
+                  </a>
+                </li>
+                <li class="sidebar-season-item" data-season="2026">
+                  <a href="#2026" class="sidebar-season-link">
+                    <span class="sidebar-indicator">→</span> 2025-26
+                  </a>
+                </li>
+                <li class="sidebar-season-item" data-season="2025">
+                  <a href="#2025" class="sidebar-season-link">
+                    <span class="sidebar-indicator">→</span> 2024-25
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </aside>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- MAJOR SECTION DIVIDER -->
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <!-- JOIN / CONTACT SECTION -->
+    <section class="team-contact-section" aria-label="Want to be part of the team?">
+      <div class="team-contact-container container">
+        <div class="team-contact-wrap">
+          <h2 class="team-contact-heading">WANT TO BE PART OF THE TEAM?</h2>
+          <h3 class="team-contact-subheading">Think you have what it takes to build, test, and race with us?</h3>
+          <p class="team-contact-body">
+            Whether you're passionate about engineering, motorsport, fabrication, or simply want to learn by building something real, Moksha Motorsports is always looking for driven students to join the journey.
+          </p>
+          
+          <div class="team-contact-actions">
+            <a href="get-involved.html" class="team-apply-btn">
+              <div class="team-apply-btn-glow" aria-hidden="true">
+                <div></div>
+              </div>
+              <span class="team-apply-btn-text">APPLY TO JOIN <span class="arrow">→</span></span>
+            </a>
+            <a href="mailto:moksha.sae@iitgn.ac.in" class="team-email-btn">
+              <span class="btn-text">EMAIL US</span> <span class="arrow">→</span>
+            </a>
+          </div>
+
+          <p class="team-contact-footer-note">
+            Have a question before applying? Drop us a mail at 
+            <a href="mailto:moksha.sae@iitgn.ac.in" class="team-contact-link">moksha.sae@iitgn.ac.in</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-container">
+      <div class="footer-grid">
+        <!-- BRAND COLUMN -->
+        <div class="footer-col footer-brand">
+          <a href="index.html" class="footer-logo-link" aria-label="Moksha Motorsports Home">
+            <img src="assets/moksha-logo.png" alt="Moksha Motorsports Logo" class="footer-logo">
+          </a>
+          <h3 class="footer-brand-name">Moksha Motorsports</h3>
+          <p class="footer-tagline">Eternal Racing</p>
+        </div>
+
+        <!-- QUICK LINKS COLUMN -->
+        <div class="footer-col footer-links-col">
+          <h4 class="footer-col-title">QUICK LINKS</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="team.html" class="footer-link">Team</a></li>
+            <li><a href="partners.html" class="footer-link">Partners</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="index.html#contact-placeholder" class="footer-link">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- CONNECT COLUMN -->
+        <div class="footer-col footer-connect-col">
+          <h4 class="footer-col-title">CONNECT</h4>
+          <div class="footer-socials">
+            <a href="https://www.instagram.com/moksha_sae.iitgn?igsh=ZnZyM25kZWNtaHk3" target="_blank"
+              rel="noopener noreferrer" class="social-link" aria-label="Follow Moksha Motorsports on Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+            </a>
+            <a href="https://in.linkedin.com/company/moksha-motorsports" target="_blank" rel="noopener noreferrer"
+              class="social-link" aria-label="Connect with Moksha Motorsports on LinkedIn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </a>
+          </div>
+          <p class="footer-contact-item">
+            <span class="footer-item-label">Email:</span>
+            <a href="mailto:moksha.sae@iitgn.ac.in" class="footer-link">moksha.sae@iitgn.ac.in</a>
+          </p>
+          <p class="footer-contact-item">
+            <span class="footer-item-label">Phone:</span>
+            <a href="tel:+919909982227" class="footer-link">+91 9909982227</a>
+          </p>
+          <p class="footer-address">
+            <span class="footer-item-label">Location:</span><br>
+            AB-11, Maker Bhavan,<br>
+            IIT Gandhinagar, Gujarat – 382355
+          </p>
+        </div>
+      </div>
+
+      <!-- BOTTOM STRIP -->
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; Moksha Motorsports — IIT Gandhinagar</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/team.js"></script>
+</body>
+
+</html>
