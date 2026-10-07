@@ -66,6 +66,14 @@ const alumniDonors = [
     graduationYear: "2019",
     degree: "B.Tech Mechanical Engineering",
     donation: 5000
+  },
+  {
+    name: "Rohit Singh",
+    photo: "",
+    linkedin: "",
+    graduationYear: "",
+    degree: "IIT Gandhinagar Alumnus",
+    donation: 0
   }
 ];
 
@@ -153,20 +161,16 @@ function animateProgressBarAndStats() {
   const raisedEl = document.getElementById('alumniTotalAmount');
   const targetEl = document.getElementById('alumniTargetAmount');
   const percentageEl = document.getElementById('alumniProgressPercentage');
-  const goalTextEl = document.getElementById('alumniProgressGoalText');
   const trackEl = document.getElementById('alumniProgressBarTrack');
 
   // Accessibility attributes
   if (trackEl) {
     trackEl.setAttribute('aria-valuenow', Math.round(progressPercentage));
-    trackEl.setAttribute('aria-valuetext', `${formatCurrency(totalDonations)} raised of ${formatCurrency(donationTarget)} target`);
+    trackEl.setAttribute('aria-valuetext', `${formatCurrency(totalDonations)} raised`);
   }
 
   if (targetEl) {
     targetEl.textContent = formatCurrency(donationTarget);
-  }
-  if (goalTextEl) {
-    goalTextEl.textContent = `of ${formatCurrency(donationTarget)} target`;
   }
 
   // Check prefers-reduced-motion
@@ -222,7 +226,18 @@ function animateProgressBarAndStats() {
 }
 
 /**
- * Generates single Alumni Card HTML
+ * Helper to generate monogram initials from full name
+ */
+function getInitials(name) {
+  if (!name) return 'MM';
+  const parts = name.trim().split(/\s+/);
+  if (parts.length === 1) return parts[0].substring(0, 2).toUpperCase();
+  return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
+}
+
+/**
+ * Generates single Alumni Card HTML matching Team Page member-card layout.
+ * Only includes LinkedIn action icon button for alumni page.
  */
 function createAlumniCardHtml(alumnus) {
   const name = escapeHtml(alumnus.name || 'Anonymous Alumnus');
@@ -231,46 +246,49 @@ function createAlumniCardHtml(alumnus) {
   const linkedinUrl = alumnus.linkedin ? escapeHtml(alumnus.linkedin) : '';
   const gradYear = alumnus.graduationYear ? escapeHtml(alumnus.graduationYear) : '';
   const degree = alumnus.degree ? escapeHtml(alumnus.degree) : '';
+  const initials = getInitials(alumnus.name);
 
-  // Avatar Fallback SVG
-  const fallbackAvatar = `
-    <div class="alumni-avatar-placeholder" aria-hidden="true">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-        <circle cx="12" cy="7" r="4"/>
-      </svg>
-    </div>
-  `;
+  let rolesHtml = '';
+  if (gradYear) {
+    rolesHtml += `<span class="member-role-badge">Class of ${gradYear}</span>`;
+  }
+  if (degree) {
+    rolesHtml += `<span class="member-role-badge">${degree}</span>`;
+  }
 
-  const photoMarkup = hasPhoto
-    ? `<img src="${photoUrl}" alt="${name}" class="alumni-photo" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML=\`${fallbackAvatar}\`;" />`
-    : fallbackAvatar;
-
-  const metaMarkup = (gradYear || degree)
-    ? `<p class="alumni-card-meta">${gradYear ? `Class of ${gradYear}` : ''}${gradYear && degree ? ' • ' : ''}${degree}</p>`
-    : '';
-
-  const linkedinMarkup = linkedinUrl
-    ? `<a href="${linkedinUrl}" target="_blank" rel="noopener noreferrer" class="alumni-linkedin-link" aria-label="View ${name}'s LinkedIn profile">
-        <svg class="linkedin-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+  const linkedinHtml = linkedinUrl
+    ? `<a href="${linkedinUrl}" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="LinkedIn profile of ${name}" title="LinkedIn profile of ${name}">
+        <svg class="member-social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
           <rect x="2" y="9" width="4" height="12"/>
           <circle cx="4" cy="4" r="2"/>
         </svg>
-        <span>LINKEDIN</span>
-        <span class="arrow">↗</span>
        </a>`
-    : '';
+    : `<span class="social-icon-link disabled" title="LinkedIn unavailable" aria-hidden="true">
+        <svg class="member-social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+          <rect x="2" y="9" width="4" height="12"/>
+          <circle cx="4" cy="4" r="2"/>
+        </svg>
+       </span>`;
 
   return `
-    <article class="alumni-card">
-      <div class="alumni-photo-wrapper">
-        ${photoMarkup}
+    <article class="member-card alumni-card" aria-label="Alumnus ${name}">
+      <div class="member-portrait-wrap">
+        ${hasPhoto
+          ? `<img src="${photoUrl}" alt="${name}" class="member-portrait" loading="lazy" />`
+          : `<div class="monogram-tile"><span class="monogram-text">${initials}</span></div>`
+        }
+        <div class="card-hover-border"></div>
       </div>
-      <div class="alumni-card-content">
-        <h3 class="alumni-card-name">${name}</h3>
-        ${metaMarkup}
-        ${linkedinMarkup}
+      <div class="member-info">
+        <h3 class="member-name">${name}</h3>
+        <div class="member-roles">
+          ${rolesHtml}
+        </div>
+        <div class="member-socials">
+          ${linkedinHtml}
+        </div>
       </div>
     </article>
   `;

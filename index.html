@@ -26,7 +26,7 @@
       <a href="index.html" class="nav-link active">Home</a>
       <a href="team.html" class="nav-link">Team</a>
       <a href="partners.html" class="nav-link">Partners</a>
-      <a href="alumni-donors.html" class="nav-link">Alumni</a>
+      <a href="alumni-donors.html" class="nav-link">Alumni Donors</a>
       <a href="about.html" class="nav-link">About Us</a>
     </nav>
 
@@ -43,21 +43,34 @@
     <a href="index.html" class="nav-link active">Home</a>
     <a href="team.html" class="nav-link">Team</a>
     <a href="partners.html" class="nav-link">Partners</a>
-    <a href="alumni-donors.html" class="nav-link">Alumni</a>
+    <a href="alumni-donors.html" class="nav-link">Alumni Donors</a>
     <a href="about.html" class="nav-link">About Us</a>
   </div>
 
   <main class="home-page-wrapper">
-    <!-- HOME PAGE LIVE AMBIENT BACKGROUND SYSTEM -->
-    <div class="home-ambient-bg" aria-hidden="true">
-      <div class="ambient-glow glow-top-right"></div>
-      <div class="ambient-glow glow-mid-left"></div>
-      <div class="ambient-glow glow-bottom-right"></div>
-      <div class="ambient-grid-overlay"></div>
+    <!-- HOME PAGE LIVE AMBIENT BACKGROUND SYSTEM (FULL EDGE-TO-EDGE MOTORSPORT TREATMENT) -->
+    <div class="home-ambient-bg" id="homeAmbientBg" aria-hidden="true">
+      <div class="ambient-layer ambient-flowing-gradients">
+        <div class="gradient-blob blob-top-left"></div>
+        <div class="gradient-blob blob-top-right"></div>
+        <div class="gradient-blob blob-mid-left"></div>
+        <div class="gradient-blob blob-mid-right"></div>
+        <div class="gradient-blob blob-bottom-left"></div>
+        <div class="gradient-blob blob-bottom-right"></div>
+      </div>
+      <div class="ambient-layer ambient-speed-streaks">
+        <div class="speed-streak streak-1"></div>
+        <div class="speed-streak streak-2"></div>
+        <div class="speed-streak streak-3"></div>
+        <div class="speed-streak streak-4"></div>
+      </div>
+      <div class="ambient-layer ambient-tech-mesh"></div>
+      <div class="ambient-layer ambient-vignette"></div>
     </div>
 
     <!-- FULL-SCREEN HERO SECTION WITH CINEMATIC BOTTOM FADE -->
     <section class="hero cinematic-hero" aria-label="Hero Section">
+      <div class="hero-bg-image" aria-hidden="true"></div>
       <div class="cinematic-hero-overlay" aria-hidden="true"></div>
       <div class="hero-center-content">
         <h1 class="hero-title">MOKSHA MOTORSPORTS</h1>
@@ -92,6 +105,70 @@
       </div>
     </section>
 
+    <!-- ACHIEVEMENTS SECTION (Immediately after Hero Section) -->
+    <section id="achievements" class="achievements-section" aria-label="Team Achievements & Championship Record">
+      <div class="achievements-container container">
+        <div class="achievements-header reveal">
+          <h2 class="achievements-title">ACHIEVEMENTS</h2>
+        </div>
+
+        <div class="achievements-grid">
+          <!-- Achievement Item 01 -->
+          <article class="achievement-card reveal" aria-label="1st in Gujarat, eBAJA Virtuals 2026">
+            <div class="achievement-header-row">
+              <span class="achievement-year-badge">2026</span>
+              <span class="achievement-category-tag">eBAJA VIRTUALS</span>
+            </div>
+            <div class="achievement-rank-wrap">
+              <span class="rank-primary">1ST</span>
+              <span class="rank-label">IN GUJARAT</span>
+            </div>
+            <div class="achievement-divider"></div>
+            <div class="achievement-footer-meta">
+              <p class="event-name">eBAJA Virtuals</p>
+            </div>
+          </article>
+
+          <!-- Achievement Item 02: 3rd in MathWorks -->
+          <article class="achievement-card reveal" aria-label="3rd in MathWorks, Simulation Event 2026 Out of 93 Teams">
+            <div class="achievement-header-row">
+              <span class="achievement-year-badge">2026</span>
+              <span class="achievement-category-tag">MATHWORKS SIMULATION</span>
+            </div>
+            <div class="achievement-rank-wrap">
+              <span class="rank-primary">3RD</span>
+              <span class="rank-label">IN MATHWORKS</span>
+            </div>
+            <div class="achievement-divider"></div>
+            <div class="achievement-footer-meta">
+              <p class="event-name">Simulation Event</p>
+              <p class="event-detail">Out of 93 Teams</p>
+            </div>
+          </article>
+
+          <!-- Achievement Item 03: 18th Overall -->
+          <article class="achievement-card reveal" aria-label="18th Overall, eBAJA Virtuals 2026 Out of 93 Teams">
+            <div class="achievement-header-row">
+              <span class="achievement-year-badge">2026</span>
+              <span class="achievement-category-tag">eBAJA VIRTUALS</span>
+            </div>
+            <div class="achievement-rank-wrap">
+              <span class="rank-primary">18TH</span>
+              <span class="rank-label">OVERALL</span>
+            </div>
+            <div class="achievement-divider"></div>
+            <div class="achievement-footer-meta">
+              <p class="event-name">eBAJA Virtuals</p>
+              <p class="event-detail">Out of 93 Teams</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAJOR SECTION DIVIDER -->
+    <div class="section-divider" aria-hidden="true"></div>
+
     <!-- WHO WE ARE SECTION -->
     <section id="who-we-are" class="who-section" aria-label="Who We Are">
       <h2 class="section-heading who-heading">Who We Are</h2>
@@ -108,64 +185,8 @@
         </div>
         <div class="who-image reveal">
           <div class="image-placeholder">
-            <!-- Placeholder image -->
+            <img src="assets/home-wwr.jpg" alt="Who We Are - Moksha Motorsports Team" loading="lazy" />
           </div>
-          <p class="caption">FIG. 01</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- MAJOR SECTION DIVIDER -->
-    <div class="section-divider" aria-hidden="true"></div>
-
-    <!-- OUR MISSION SECTION -->
-    <section id="what-we-believe" class="mission-section" aria-label="Our Mission">
-      <h2 class="section-heading mission-heading">Our Mission</h2>
-
-      <!-- Principle 01: Image on Right -->
-      <div class="principle-row reveal">
-        <div class="principle-text-group">
-          <span class="principle-number">01</span>
-          <div class="principle-content">
-            <h3 class="principle-title">HANDS‑ON EXPERIENCE</h3>
-            <p class="principle-desc">Gaining deep understanding of automotive engineering through hands‑on experience.
-            </p>
-          </div>
-        </div>
-        <div class="principle-image-wrap">
-          <div class="image-placeholder"></div>
-          <p class="caption">FIG. 02</p>
-        </div>
-      </div>
-
-      <!-- Principle 02: Image on Left -->
-      <div class="principle-row principle-row-reverse reveal">
-        <div class="principle-image-wrap">
-          <div class="image-placeholder"></div>
-          <p class="caption">FIG. 03</p>
-        </div>
-        <div class="principle-text-group">
-          <span class="principle-number">02</span>
-          <div class="principle-content">
-            <h3 class="principle-title">INNOVATION &amp; EXPLORATION</h3>
-            <p class="principle-desc">Exploring new ideas in areas such as suspension, electronics and drivetrain.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Principle 03: Image on Right -->
-      <div class="principle-row reveal">
-        <div class="principle-text-group">
-          <span class="principle-number">03</span>
-          <div class="principle-content">
-            <h3 class="principle-title">SMART ENGINEERING</h3>
-            <p class="principle-desc">Building a car that reflects smart engineering rather than simply speed or power.
-            </p>
-          </div>
-        </div>
-        <div class="principle-image-wrap">
-          <div class="image-placeholder"></div>
-          <p class="caption">FIG. 04</p>
         </div>
       </div>
     </section>
@@ -186,7 +207,7 @@
         <div class="sustainability-grid">
           <!-- Principles List Column (4 + 3 Layout) -->
           <div class="sustainability-principles-col reveal">
-            <!-- First Group: Principles 01 - 04 -->
+            <!-- Principles List 01 - 07 -->
             <div class="principles-group">
               <div class="sustainability-row">
                 <span class="sustainability-num">01</span>
@@ -204,13 +225,6 @@
                 <span class="sustainability-num">04</span>
                 <span class="sustainability-text">Reuse of components</span>
               </div>
-            </div>
-
-            <!-- Group Spacer -->
-            <div class="principles-group-spacer"></div>
-
-            <!-- Second Group: Principles 05 - 07 -->
-            <div class="principles-group">
               <div class="sustainability-row">
                 <span class="sustainability-num">05</span>
                 <span class="sustainability-text">Recycling</span>
@@ -235,7 +249,7 @@
               <p class="caption">FIG. 05 — EV POWERTRAIN &amp; RESPONSIBLE ENGINEERING</p>
             </div>
           </div>
-      </div>
+        </div>
     </section>
 
     <!-- MAJOR SECTION DIVIDER -->
@@ -249,33 +263,36 @@
           <h2 class="partners-heading">OUR PARTNERS</h2>
         </div>
 
-        <!-- Sponsor Wall Composition (2 Rows: 3 and 4 logos) -->
+        <!-- Sponsor Wall Composition (2 Tiered Rows: Top Donors + Associate Donors) -->
         <div class="sponsor-wall reveal">
-          <!-- Row 1: 3 Logos (Spark Minda, Gujarat Tourism, Kula) -->
-          <div class="sponsor-wall-row sponsor-wall-row-3">
-            <a href="https://sparkminda.com" target="_blank" rel="noopener noreferrer" class="sponsor-wall-item" aria-label="Spark Minda Foundation website">
+          <!-- Row 1: Top Tier Partners (Spark Minda, Gujarat Tourism) -->
+          <div class="sponsor-wall-row sponsor-wall-row-top sponsor-wall-row-2">
+            <a href="https://sparkminda.com" target="_blank" rel="noopener noreferrer" class="sponsor-wall-item"
+              aria-label="Spark Minda Foundation website">
               <img src="assets/smf-logo.png" alt="Spark Minda Logo" class="sponsor-wall-logo" loading="lazy" />
             </a>
-            <a href="https://www.gujarattourism.com" target="_blank" rel="noopener noreferrer" class="sponsor-wall-item" aria-label="Gujarat Tourism website">
+            <a href="https://www.gujarattourism.com" target="_blank" rel="noopener noreferrer" class="sponsor-wall-item"
+              aria-label="Gujarat Tourism website">
               <img src="assets/gt-logo.png" alt="Gujarat Tourism Logo" class="sponsor-wall-logo" loading="lazy" />
-            </a>
-            <a href="https://kula.design" target="_blank" rel="noopener noreferrer" class="sponsor-wall-item" aria-label="Kula website">
-              <span class="sponsor-wall-text-logo">K</span>
             </a>
           </div>
 
           <!-- Row 2: 4 Logos (BKT, Ansys, Dassault Systèmes, Maker Bhavan) -->
           <div class="sponsor-wall-row sponsor-wall-row-4">
-            <a href="https://www.bkt-tires.com" target="_blank" rel="noopener noreferrer" class="sponsor-wall-item" aria-label="BKT Tires website">
+            <a href="https://www.bkt-tires.com" target="_blank" rel="noopener noreferrer" class="sponsor-wall-item"
+              aria-label="BKT Tires website">
               <img src="assets/bkt-logo.svg" alt="BKT Logo" class="sponsor-wall-logo" loading="lazy" />
             </a>
-            <a href="https://www.ansys.com" target="_blank" rel="noopener noreferrer" class="sponsor-wall-item" aria-label="Ansys website">
+            <a href="https://www.ansys.com" target="_blank" rel="noopener noreferrer" class="sponsor-wall-item"
+              aria-label="Ansys website">
               <img src="assets/ansys-logo.svg" alt="Ansys Logo" class="sponsor-wall-logo" loading="lazy" />
             </a>
-            <a href="https://www.3ds.com" target="_blank" rel="noopener noreferrer" class="sponsor-wall-item" aria-label="Dassault Systèmes website">
+            <a href="https://www.3ds.com" target="_blank" rel="noopener noreferrer" class="sponsor-wall-item"
+              aria-label="Dassault Systèmes website">
               <img src="assets/ds-logo.svg" alt="Dassault Systèmes Logo" class="sponsor-wall-logo" loading="lazy" />
             </a>
-            <a href="https://iitgn.ac.in" target="_blank" rel="noopener noreferrer" class="sponsor-wall-item" aria-label="Maker Bhavan website">
+            <a href="https://iitgn.ac.in" target="_blank" rel="noopener noreferrer" class="sponsor-wall-item"
+              aria-label="Maker Bhavan website">
               <img src="assets/AMKER BHAVAN.png" alt="Maker Bhavan Logo" class="sponsor-wall-logo" loading="lazy" />
             </a>
           </div>
@@ -289,9 +306,11 @@
         <div class="team-contact-wrap">
           <h2 class="team-contact-heading">WANT TO PARTNER WITH US?</h2>
           <p class="team-contact-body">
-            Support the next generation of engineers and help us take our BAJA machine from the workshop to the race track. Partner with Moksha Motorsports and be part of our journey in engineering, innovation, and off-road motorsport.
+            Support the next generation of engineers and help us take our BAJA machine from the workshop to the race
+            track. Partner with Moksha Motorsports and be part of our journey in engineering, innovation, and off-road
+            motorsport.
           </p>
-          
+
           <div class="team-contact-actions">
             <a href="become-a-partner.html" class="team-apply-btn">
               <div class="team-apply-btn-glow" aria-hidden="true">

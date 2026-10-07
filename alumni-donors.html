@@ -26,7 +26,7 @@
       <a href="index.html" class="nav-link">Home</a>
       <a href="team.html" class="nav-link">Team</a>
       <a href="partners.html" class="nav-link">Partners</a>
-      <a href="alumni-donors.html" class="nav-link active">Alumni</a>
+      <a href="alumni-donors.html" class="nav-link active">Alumni Donors</a>
       <a href="about.html" class="nav-link">About Us</a>
     </nav>
 
@@ -43,51 +43,83 @@
     <a href="index.html" class="nav-link">Home</a>
     <a href="team.html" class="nav-link">Team</a>
     <a href="partners.html" class="nav-link">Partners</a>
-    <a href="alumni-donors.html" class="nav-link active">Alumni</a>
+    <a href="alumni-donors.html" class="nav-link active">Alumni Donors</a>
     <a href="about.html" class="nav-link">About Us</a>
   </div>
 
   <!-- MAIN ALUMNI DONORS PAGE CONTENT -->
   <main id="content" class="alumni-page-wrapper">
+    <!-- ALUMNI PAGE LIVE AMBIENT BACKGROUND SYSTEM -->
+    <div class="alumni-ambient-bg" id="alumniAmbientBg" aria-hidden="true">
+      <div class="ambient-layer ambient-flowing-gradients">
+        <div class="gradient-blob blob-top-left"></div>
+        <div class="gradient-blob blob-top-right"></div>
+        <div class="gradient-blob blob-mid-left"></div>
+        <div class="gradient-blob blob-mid-right"></div>
+        <div class="gradient-blob blob-bottom-left"></div>
+        <div class="gradient-blob blob-bottom-right"></div>
+      </div>
+      <div class="ambient-layer ambient-speed-streaks">
+        <div class="speed-streak streak-1"></div>
+        <div class="speed-streak streak-2"></div>
+        <div class="speed-streak streak-3"></div>
+      </div>
+      <div class="ambient-layer ambient-tech-mesh"></div>
+      <div class="ambient-layer ambient-vignette"></div>
+    </div>
 
-    <!-- 1. CINEMATIC HERO WITH BOTTOM PROGRESS STRIP (FULL VIEWPORT) -->
+    <!-- 1. CINEMATIC HERO WITH PRIMARY DONATION PROGRESS FEATURE CARD -->
     <section class="alumni-hero-section cinematic-hero" aria-label="Alumni Donors Hero Header and Support Progress">
-      <div class="alumni-hero-overlay cinematic-hero-overlay" aria-hidden="true"></div>
-      
       <div class="alumni-hero-content container">
-        <!-- Main Title Header (Upper-Middle Centered Focus) -->
-        <div class="alumni-hero-text">
+        
+        <!-- Hero Header -->
+        <div class="alumni-hero-header">
           <h1 class="alumni-hero-heading">ALUMNI DONORS</h1>
           <p class="alumni-hero-subheading">
-            BACKING THE NEXT GENERATION
+            BACKING THE NEXT GENERATION OF MOKSHA MOTORSPORTS
           </p>
         </div>
 
-        <!-- Bottom Progress Information Strip -->
-        <div class="alumni-progress-strip">
-          <div class="alumni-progress-stats">
-            <div class="stat-box stat-raised">
-              <span class="stat-label">RAISED BY OUR ALUMNI</span>
-              <span id="alumniTotalAmount" class="stat-value raised-value">₹0</span>
-            </div>
-            <div class="stat-box stat-target">
-              <span class="stat-label">TARGET</span>
-              <span id="alumniTargetAmount" class="stat-value target-value">₹2,00,000</span>
+        <!-- PRIMARY HERO FEATURE: LARGE MOTORSPORT DONATION PROGRESS CARD -->
+        <div class="alumni-hero-progress-card">
+          
+          <!-- Top Stats Row (Raised Amount) -->
+          <div class="progress-card-header">
+            <div class="progress-stat-main">
+              <span class="stat-main-label">CURRENTLY RAISED BY ALUMNI</span>
+              <div class="stat-main-amount-row">
+                <span id="alumniTotalAmount" class="stat-main-value raised-value">₹0</span>
+              </div>
             </div>
           </div>
 
-          <!-- PROGRESS BAR CONTAINER -->
-          <div class="alumni-progress-bar-container">
+          <!-- MASSIVE MOTORSPORT PROGRESS TRACK & FILL -->
+          <div class="alumni-hero-progress-track-wrap">
             <div class="alumni-progress-bar-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" id="alumniProgressBarTrack">
               <div id="alumniProgressBarFill" class="alumni-progress-bar-fill" style="width: 0%;">
                 <div class="alumni-progress-glow"></div>
+                <div class="progress-endpoint-cap"></div>
               </div>
             </div>
-            <div class="alumni-progress-meta">
-              <span id="alumniProgressPercentage" class="progress-percentage-text">0%</span>
-              <span id="alumniProgressGoalText" class="progress-goal-text">of ₹2,00,000 target</span>
+
+            <!-- Milestone Ticks (0%, 25%, 50%, 75%, 100%) -->
+            <div class="progress-milestone-ticks" aria-hidden="true">
+              <span class="tick tick-0">0%</span>
+              <span class="tick tick-25">25%</span>
+              <span class="tick tick-50">50%</span>
+              <span class="tick tick-75">75%</span>
+              <span class="tick tick-100">100%</span>
             </div>
           </div>
+
+          <!-- Action & Support CTA Bar -->
+          <div class="progress-card-actions">
+            <a href="https://donate.iitgn.ac.in/alumni/" target="_blank" rel="noopener noreferrer" class="team-apply-btn donate-hero-btn">
+              <div class="team-apply-btn-glow" aria-hidden="true"><div></div></div>
+              <span class="team-apply-btn-text">DONATE TO THE TEAM <span class="arrow">↗</span></span>
+            </a>
+          </div>
+
         </div>
       </div>
     </section>
@@ -131,7 +163,7 @@
             Whether you're an alumnus looking to give back or an organization interested in supporting the team, we'd love to hear from you.
           </p>
           <div class="team-contact-actions">
-            <a href="mailto:moksha.sae@iitgn.ac.in?subject=Alumni%20Support%20%26%20Donation%20Inquiry%20%E2%80%94%20Moksha%20Motorsports"
+            <a href="https://donate.iitgn.ac.in/alumni/" target="_blank" rel="noopener noreferrer"
               class="team-apply-btn">
               <div class="team-apply-btn-glow" aria-hidden="true">
                 <div></div>
