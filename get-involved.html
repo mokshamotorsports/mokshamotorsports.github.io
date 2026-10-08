@@ -53,7 +53,7 @@
 
       <!-- LEFT COLUMN: TEAM / BAJA PHOTO WITH CINEMATIC EDGE BLEND -->
       <div class="portal-media-col" aria-label="Moksha Motorsports Application">
-        <img src="assets/application-portal.png" alt="Moksha Motorsports Application" class="portal-hero-img">
+        <img src="assets/application-portal.webp" alt="Moksha Motorsports Application" class="portal-hero-img">
         <div class="portal-overlay-fade-left" aria-hidden="true"></div>
         <div class="portal-overlay-fade-right" aria-hidden="true"></div>
         <div class="portal-overlay-fade-vertical" aria-hidden="true"></div>
@@ -78,25 +78,28 @@
           <form id="mokshaJoinForm" class="portal-form" novalidate>
             <h3 class="portal-form-heading">YOUR DETAILS</h3>
 
+            <!-- HONEYPOT FIELD FOR SPAM PROTECTION (HIDDEN FROM NORMAL USERS) -->
+            <input type="checkbox" name="botcheck" id="botcheck" style="display: none !important;" tabindex="-1" autocomplete="off">
+
             <!-- FULL NAME -->
             <div class="portal-form-group">
               <label for="applicantName" class="portal-label">Name <span class="required-asterisk">*</span></label>
-              <input type="text" id="applicantName" name="applicantName" class="portal-input" placeholder="Enter your full name" required>
-              <span class="field-error-msg" id="nameError">Please enter your full name.</span>
+              <input type="text" id="applicantName" name="name" class="portal-input" placeholder="Enter your full name" maxlength="100" required>
+              <span class="field-error-msg" id="nameError" role="alert">Please enter your full name.</span>
             </div>
 
             <!-- EMAIL -->
             <div class="portal-form-group">
               <label for="applicantEmail" class="portal-label">Email <span class="required-asterisk">*</span></label>
-              <input type="email" id="applicantEmail" name="applicantEmail" class="portal-input" placeholder="Enter your email" required>
-              <span class="field-error-msg" id="emailError">Please enter a valid email address.</span>
+              <input type="email" id="applicantEmail" name="email" class="portal-input" placeholder="Enter your email" maxlength="120" required>
+              <span class="field-error-msg" id="emailError" role="alert">Please enter a valid email address.</span>
             </div>
 
             <!-- WHY DO YOU WANT TO JOIN -->
             <div class="portal-form-group">
               <label for="applicantMotivation" class="portal-label">Why do you want to join Moksha Motorsports? <span class="required-asterisk">*</span></label>
-              <textarea id="applicantMotivation" name="applicantMotivation" rows="4" class="portal-textarea" placeholder="Tell us a little about yourself and what you'd like to contribute to the team." required></textarea>
-              <span class="field-error-msg" id="motivationError">Please share your motivation for joining.</span>
+              <textarea id="applicantMotivation" name="motivation" rows="4" class="portal-textarea" placeholder="Tell us a little about yourself and what you'd like to contribute to the team." maxlength="2500" required></textarea>
+              <span class="field-error-msg" id="motivationError" role="alert">Please share your motivation for joining.</span>
             </div>
 
             <!-- SUBMIT BUTTON -->
@@ -110,11 +113,20 @@
             </div>
 
             <!-- SUCCESS CONFIRMATION ALERT -->
-            <div id="portalSuccessAlert" class="portal-success-alert" style="display: none;">
+            <div id="portalSuccessAlert" class="portal-success-alert" style="display: none;" role="status" aria-live="polite">
               <div class="success-icon">✓</div>
               <h4 class="success-title">APPLICATION RECEIVED!</h4>
               <p class="success-body">
-                Thank you for applying to join Moksha Motorsports. We've logged your details and our team will get back to you on your email shortly.
+                Thank you for applying to join Moksha Motorsports. We've received your details and our team will get back to you on your email shortly.
+              </p>
+            </div>
+
+            <!-- ERROR ALERT -->
+            <div id="portalErrorAlert" class="portal-error-alert" style="display: none;" role="alert" aria-live="assertive">
+              <div class="error-icon">✕</div>
+              <h4 class="error-title">SUBMISSION NOTICE</h4>
+              <p class="error-body" id="portalErrorText">
+                Something went wrong while submitting your application. Please try again or email us directly at <a href="mailto:moksha.sae@iitgn.ac.in" style="color: #ffffff; text-decoration: underline;">moksha.sae@iitgn.ac.in</a>.
               </p>
             </div>
           </form>
@@ -153,7 +165,7 @@
         <div class="footer-col footer-connect-col">
           <h4 class="footer-col-title">CONNECT</h4>
           <div class="footer-socials">
-            <a href="https://www.instagram.com/moksha_sae.iitgn?igsh=ZnZyM25kZWNtaHk3" target="_blank"
+            <a href="https://www.instagram.com/moksha.motorsports/" target="_blank"
               rel="noopener noreferrer" class="social-link" aria-label="Follow Moksha Motorsports on Instagram">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                 stroke-linejoin="round">
@@ -179,6 +191,7 @@
           <p class="footer-contact-item">
             <span class="footer-item-label">Phone:</span>
             <a href="tel:+919909982227" class="footer-link">+91 9909982227</a>
+            <span class="footer-contact-subtext">(Rishi Pinara, Vice Captain)</span>
           </p>
           <p class="footer-address">
             <span class="footer-item-label">Location:</span><br>
@@ -196,24 +209,66 @@
   </footer>
 
   <script>
+    /**
+     * FORM SUBMISSION & SECURITY CONFIGURATION
+     * Configure your Form-to-Email service endpoint here (Web3Forms or Formspree).
+     * Submissions will automatically send applicant details to moksha.sae@iitgn.ac.in
+     */
+    const FORM_CONFIG = {
+      // Default endpoint: Web3Forms (https://api.web3forms.com/submit) or Formspree (https://formspree.io/f/YOUR_FORM_ID)
+      ENDPOINT: 'https://api.web3forms.com/submit',
+      
+      // Web3Forms Access Key (Obtain free key for moksha.sae@iitgn.ac.in at https://web3forms.com)
+      ACCESS_KEY: window.WEB3FORMS_ACCESS_KEY || 'YOUR_WEB3FORMS_ACCESS_KEY',
+
+      SUBJECT: 'New Get Involved Application — Moksha Motorsports',
+      FROM_NAME: 'Moksha Motorsports Join Portal',
+
+      // Cooldown period after successful submission (5 minutes)
+      COOLDOWN_MS: 5 * 60 * 1000,
+      COOLDOWN_STORAGE_KEY: 'getInvolvedLastSubmission'
+    };
+
     document.addEventListener('DOMContentLoaded', () => {
       const form = document.getElementById('mokshaJoinForm');
       const submitBtn = document.getElementById('portalSubmitBtn');
       const successAlert = document.getElementById('portalSuccessAlert');
+      const errorAlert = document.getElementById('portalErrorAlert');
+      const errorText = document.getElementById('portalErrorText');
 
       if (!form) return;
 
-      form.addEventListener('submit', (e) => {
+      form.addEventListener('submit', async (e) => {
         e.preventDefault();
 
-        // Reset error displays
+        // Reset error displays & alerts
         document.querySelectorAll('.field-error-msg').forEach(el => el.style.display = 'none');
+        if (successAlert) successAlert.style.display = 'none';
+        if (errorAlert) errorAlert.style.display = 'none';
 
+        // 1. SUBMISSION COOLDOWN CHECK (Prevent rapid repeated applications)
+        const lastSubmissionTime = localStorage.getItem(FORM_CONFIG.COOLDOWN_STORAGE_KEY);
+        if (lastSubmissionTime) {
+          const elapsed = Date.now() - parseInt(lastSubmissionTime, 10);
+          if (!isNaN(elapsed) && elapsed < FORM_CONFIG.COOLDOWN_MS) {
+            const remainingMins = Math.ceil((FORM_CONFIG.COOLDOWN_MS - elapsed) / 60000);
+            if (errorAlert && errorText) {
+              errorText.innerHTML = `You have recently submitted an application. Please wait ${remainingMins} minute${remainingMins > 1 ? 's' : ''} before submitting another application.`;
+              errorAlert.style.display = 'block';
+              errorAlert.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+            return;
+          }
+        }
+
+        // 2. FIELD VALIDATION
         let isValid = true;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
         // Name validation
         const nameInput = document.getElementById('applicantName');
-        if (!nameInput || !nameInput.value.trim()) {
+        const nameVal = nameInput ? nameInput.value.trim() : '';
+        if (!nameVal || nameVal.length > 100) {
           const err = document.getElementById('nameError');
           if (err) err.style.display = 'block';
           isValid = false;
@@ -222,7 +277,7 @@
         // Email validation
         const emailInput = document.getElementById('applicantEmail');
         const emailVal = emailInput ? emailInput.value.trim() : '';
-        if (!emailVal || !emailVal.includes('@')) {
+        if (!emailVal || !emailRegex.test(emailVal) || emailVal.length > 120) {
           const err = document.getElementById('emailError');
           if (err) err.style.display = 'block';
           isValid = false;
@@ -230,7 +285,8 @@
 
         // Motivation validation
         const motivationInput = document.getElementById('applicantMotivation');
-        if (!motivationInput || !motivationInput.value.trim() || motivationInput.value.trim().length < 5) {
+        const motivationVal = motivationInput ? motivationInput.value.trim() : '';
+        if (!motivationVal || motivationVal.length < 5 || motivationVal.length > 2500) {
           const err = document.getElementById('motivationError');
           if (err) err.style.display = 'block';
           isValid = false;
@@ -244,25 +300,70 @@
           return;
         }
 
-        // Processing / Loading State
+        // 3. HONEYPOT BOT CHECK
+        const botcheck = document.getElementById('botcheck');
+        if (botcheck && botcheck.checked) {
+          // Quietly ignore bot submissions
+          return;
+        }
+
+        // 4. PROCESSING / LOADING STATE
         const btnText = submitBtn.querySelector('.btn-text');
         const origText = btnText ? btnText.textContent : 'SUBMIT APPLICATION';
         if (btnText) btnText.textContent = 'SUBMITTING APPLICATION...';
         submitBtn.disabled = true;
         submitBtn.style.opacity = '0.7';
 
-        // Simulate submission response
-        setTimeout(() => {
-          form.reset();
+        try {
+          // Prepare Form Data payload
+          const formData = new FormData(form);
+
+          // Append service metadata
+          if (FORM_CONFIG.ACCESS_KEY && FORM_CONFIG.ACCESS_KEY !== 'YOUR_WEB3FORMS_ACCESS_KEY') {
+            formData.append('access_key', FORM_CONFIG.ACCESS_KEY);
+          }
+          formData.append('subject', FORM_CONFIG.SUBJECT);
+          formData.append('from_name', FORM_CONFIG.FROM_NAME);
+
+          // Send POST request to provider endpoint
+          const response = await fetch(FORM_CONFIG.ENDPOINT, {
+            method: 'POST',
+            body: formData,
+            headers: {
+              'Accept': 'application/json'
+            }
+          });
+
+          const result = await response.json().catch(() => ({}));
+
+          if (response.ok || result.success) {
+            // SUCCESS FLOW: Store cooldown timestamp ONLY on successful submission
+            localStorage.setItem(FORM_CONFIG.COOLDOWN_STORAGE_KEY, Date.now().toString());
+            form.reset();
+            if (successAlert) {
+              successAlert.style.display = 'block';
+              successAlert.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+          } else {
+            // API REJECTION / UNCONFIGURED KEY
+            const errMsg = result.message || 'Unable to process submission at this time.';
+            throw new Error(errMsg);
+          }
+
+        } catch (err) {
+          if (errorAlert) {
+            if (errorText && err.message) {
+              errorText.innerHTML = `${err.message} If the issue persists, please email us directly at <a href="mailto:moksha.sae@iitgn.ac.in" style="color: #ffffff; text-decoration: underline;">moksha.sae@iitgn.ac.in</a>.`;
+            }
+            errorAlert.style.display = 'block';
+            errorAlert.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        } finally {
+          // Restore button state
           if (btnText) btnText.textContent = origText;
           submitBtn.disabled = false;
           submitBtn.style.opacity = '1';
-
-          if (successAlert) {
-            successAlert.style.display = 'block';
-            successAlert.scrollIntoView({ behavior: 'smooth', block: 'center' });
-          }
-        }, 1200);
+        }
       });
     });
   </script>

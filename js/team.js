@@ -35,7 +35,7 @@ const teamsData = {
         initials: "AY",
         img: "assets/team-members/adi-img.webp",
         linkedin: "https://in.linkedin.com/company/moksha-motorsports",
-        instagram: "https://www.instagram.com/moksha_sae.iitgn",
+        instagram: "https://www.instagram.com/moksha.motorsports/",
         email: "moksha.sae@iitgn.ac.in"
       },
       {
@@ -44,7 +44,7 @@ const teamsData = {
         initials: "RP",
         img: "assets/team-members/rishi-img.webp",
         linkedin: "https://in.linkedin.com/company/moksha-motorsports",
-        instagram: "https://www.instagram.com/moksha_sae.iitgn",
+        instagram: "https://www.instagram.com/moksha.motorsports/",
         email: "moksha.sae@iitgn.ac.in"
       },
       {
@@ -53,7 +53,7 @@ const teamsData = {
         initials: "PW",
         img: "assets/team-members/pratham-img.webp",
         linkedin: "https://in.linkedin.com/company/moksha-motorsports",
-        instagram: "https://www.instagram.com/moksha_sae.iitgn",
+        instagram: "https://www.instagram.com/moksha.motorsports/",
         email: "moksha.sae@iitgn.ac.in"
       },
       {
@@ -114,7 +114,7 @@ const teamsData = {
         name: "Dhruv Meshram",
         roles: [],
         initials: "DM",
-        img: "assets/team-members/dhruv-img.webp",
+        img: "assets/team-members/dhruv-meshram-img.jpeg",
         linkedin: "",
         instagram: "",
         email: "moksha.sae@iitgn.ac.in"
@@ -260,34 +260,34 @@ const teamsData = {
         name: "Deepak Gadhave",
         roles: ["Team Captain"],
         initials: "DG",
-        img: "",
+        img: "assets/team-members/deepak-gadhave-img.jpg",
         linkedin: "https://in.linkedin.com/company/moksha-motorsports",
-        instagram: "https://www.instagram.com/moksha_sae.iitgn",
+        instagram: "https://www.instagram.com/moksha.motorsports/",
         email: "moksha.sae@iitgn.ac.in"
       },
       {
         name: "Kushagreek Basu",
         roles: ["Vice-Captain", "Suspension Lead", "Finance Lead"],
         initials: "KB",
-        img: "",
+        img: "assets/team-members/kushagreek-basu-img.jpg",
         linkedin: "https://in.linkedin.com/company/moksha-motorsports",
-        instagram: "https://www.instagram.com/moksha_sae.iitgn",
+        instagram: "https://www.instagram.com/moksha.motorsports/",
         email: "moksha.sae@iitgn.ac.in"
       },
       {
         name: "Goraksh Bendale",
         roles: ["Vice-Captain", "Chassis Lead"],
         initials: "GB",
-        img: "",
+        img: "assets/team-members/goraksh-bendale-img.webp",
         linkedin: "https://in.linkedin.com/company/moksha-motorsports",
-        instagram: "https://www.instagram.com/moksha_sae.iitgn",
+        instagram: "https://www.instagram.com/moksha.motorsports/",
         email: "moksha.sae@iitgn.ac.in"
       },
       {
         name: "Raghav Gopal Mudigonda",
         roles: ["Powertrain Lead"],
         initials: "RM",
-        img: "",
+        img: "assets/team-members/rgmg-img.jpg",
         linkedin: "",
         instagram: "",
         email: "moksha.sae@iitgn.ac.in"
@@ -296,7 +296,7 @@ const teamsData = {
         name: "Ananya Balike",
         roles: ["Electricals Lead"],
         initials: "AB",
-        img: "",
+        img: "assets/team-members/ananya-balike-img.jpg",
         linkedin: "",
         instagram: "",
         email: "moksha.sae@iitgn.ac.in"
@@ -314,7 +314,7 @@ const teamsData = {
         name: "Aditi Singh",
         roles: ["PR Lead"],
         initials: "AS",
-        img: "",
+        img: "assets/team-members/aditi-singh-img.JPG",
         linkedin: "",
         instagram: "",
         email: "moksha.sae@iitgn.ac.in"
@@ -323,7 +323,7 @@ const teamsData = {
         name: "Aditya Jain",
         roles: ["Analysis Lead"],
         initials: "AJ",
-        img: "",
+        img: "assets/team-members/aditya-jain-img.jpg",
         linkedin: "",
         instagram: "",
         email: "moksha.sae@iitgn.ac.in"
@@ -332,7 +332,7 @@ const teamsData = {
         name: "Apoorv Rane",
         roles: ["Steering Lead"],
         initials: "AR",
-        img: "",
+        img: "assets/team-members/apoorv-rane-img.jpeg",
         linkedin: "",
         instagram: "",
         email: "moksha.sae@iitgn.ac.in"
@@ -379,7 +379,7 @@ const teamsData = {
         name: "Dhruv Meshram",
         roles: ["Brakes"],
         initials: "DM",
-        img: "assets/team-members/dhruv-img.webp",
+        img: "assets/team-members/dhruv-meshram-img.jpeg",
         linkedin: "",
         instagram: "",
         email: "moksha.sae@iitgn.ac.in"
@@ -406,7 +406,7 @@ const teamsData = {
         name: "Abhinav",
         roles: ["Analysis"],
         initials: "A",
-        img: "",
+        img: "assets/team-members/abhinav-yadav-img.jpg",
         linkedin: "",
         instagram: "",
         email: "moksha.sae@iitgn.ac.in"
@@ -415,7 +415,7 @@ const teamsData = {
         name: "Khushal Manani",
         roles: ["Analysis"],
         initials: "KM",
-        img: "",
+        img: "assets/team-members/khushal-manani-img.png",
         linkedin: "",
         instagram: "",
         email: "moksha.sae@iitgn.ac.in"
@@ -424,7 +424,7 @@ const teamsData = {
         name: "Yada Sairam",
         roles: ["Powertrain"],
         initials: "YS",
-        img: "",
+        img: "assets/team-members/sairam-img.jpg",
         linkedin: "",
         instagram: "",
         email: "moksha.sae@iitgn.ac.in"
@@ -433,7 +433,7 @@ const teamsData = {
         name: "Daksh Dave",
         roles: ["Electricals"],
         initials: "DD",
-        img: "",
+        img: "assets/team-members/daksh-dave-img.jpg",
         linkedin: "",
         instagram: "",
         email: "moksha.sae@iitgn.ac.in"
@@ -442,7 +442,7 @@ const teamsData = {
         name: "Raghavpravin K S",
         roles: ["Electricals"],
         initials: "RK",
-        img: "",
+        img: "assets/team-members/raghavpravin-ks-img.jpg",
         linkedin: "",
         instagram: "",
         email: "moksha.sae@iitgn.ac.in"
@@ -451,7 +451,7 @@ const teamsData = {
         name: "Afraz Azeem",
         roles: ["Chassis"],
         initials: "AA",
-        img: "",
+        img: "assets/team-members/afraz-azeem-img.png",
         linkedin: "",
         instagram: "",
         email: "moksha.sae@iitgn.ac.in"
@@ -460,7 +460,7 @@ const teamsData = {
         name: "Kusal Sai Charan Korada",
         roles: ["Analysis"],
         initials: "KK",
-        img: "",
+        img: "assets/team-members/kusal-img.jpg",
         linkedin: "",
         instagram: "",
         email: "moksha.sae@iitgn.ac.in"
@@ -469,7 +469,7 @@ const teamsData = {
         name: "Padisetti J S Srikar",
         roles: ["PR"],
         initials: "PS",
-        img: "",
+        img: "assets/team-members/srikar-padisetti-img.jpg",
         linkedin: "",
         instagram: "",
         email: "moksha.sae@iitgn.ac.in"
@@ -478,7 +478,7 @@ const teamsData = {
         name: "Tejas Vijapur",
         roles: ["Suspension"],
         initials: "TV",
-        img: "",
+        img: "assets/team-members/tejas-nv-img.jpg",
         linkedin: "",
         instagram: "",
         email: "moksha.sae@iitgn.ac.in"
@@ -511,56 +511,119 @@ const teamsData = {
     coreTeam: [
       {
         name: "Yash Patil",
-        roles: ["Team Captain 2025"],
+        roles: ["Captain"],
         initials: "YP",
-        img: "",
+        img: "assets/team-members/yash-patil-img.jpg",
         linkedin: "https://in.linkedin.com/company/moksha-motorsports",
-        instagram: "https://www.instagram.com/moksha_sae.iitgn",
+        instagram: "https://www.instagram.com/moksha.motorsports/",
         email: "moksha.sae@iitgn.ac.in"
       },
       {
         name: "Tanish Phophalkar",
-        roles: ["Vice Captain", "Design Lead 2025"],
+        roles: ["Vice Captain", "Design & Analysis Lead"],
         initials: "TP",
-        img: "",
+        img: "assets/team-members/tanish-img.jpg",
         linkedin: "https://in.linkedin.com/company/moksha-motorsports",
-        instagram: "https://www.instagram.com/moksha_sae.iitgn",
+        instagram: "https://www.instagram.com/moksha.motorsports/",
+        email: "moksha.sae@iitgn.ac.in"
+      },
+      {
+        name: "Deepak Gadhave",
+        roles: ["SSB Lead"],
+        initials: "DG",
+        img: "assets/team-members/deepak-gadhave-img.jpg",
+        linkedin: "https://in.linkedin.com/company/moksha-motorsports",
+        instagram: "https://www.instagram.com/moksha.motorsports/",
         email: "moksha.sae@iitgn.ac.in"
       }
     ],
     remainingTeam: [
       {
-        name: "Aditya Yadav",
-        roles: ["Chassis Design Engineer"],
-        initials: "AY",
-        img: "assets/team-members/adi-img.webp",
-        linkedin: "https://in.linkedin.com/company/moksha-motorsports",
-        instagram: "",
-        email: "moksha.sae@iitgn.ac.in"
-      },
-      {
-        name: "Rishi Pinara",
-        roles: ["Suspension Engineer"],
-        initials: "RP",
-        img: "assets/team-members/rishi-img.webp",
-        linkedin: "https://in.linkedin.com/company/moksha-motorsports",
-        instagram: "",
-        email: "moksha.sae@iitgn.ac.in"
-      },
-      {
-        name: "Pratham Sanjay Wala",
-        roles: ["Brakes Engineer"],
-        initials: "PW",
-        img: "assets/team-members/pratham-img.webp",
+        name: "Kushagreek Basu",
+        roles: ["Team Member"],
+        initials: "KB",
+        img: "assets/team-members/kushagreek-basu-img.jpg",
         linkedin: "",
         instagram: "",
         email: "moksha.sae@iitgn.ac.in"
       },
       {
-        name: "Vikram Singh",
-        roles: ["Cooling & Heat Exchange"],
-        initials: "VS",
-        img: "",
+        name: "Goraksh Bendale",
+        roles: ["Team Member"],
+        initials: "GB",
+        img: "assets/team-members/goraksh-bendale-img.webp",
+        linkedin: "",
+        instagram: "",
+        email: "moksha.sae@iitgn.ac.in"
+      },
+      {
+        name: "Ananya Balike",
+        roles: ["Team Member"],
+        initials: "AB",
+        img: "assets/team-members/ananya-balike-img.jpg",
+        linkedin: "",
+        instagram: "",
+        email: "moksha.sae@iitgn.ac.in"
+      },
+      {
+        name: "Monisha Kavuri",
+        roles: ["Team Member"],
+        initials: "MK",
+        img: "assets/team-members/monisha-img.webp",
+        linkedin: "",
+        instagram: "",
+        email: "moksha.sae@iitgn.ac.in"
+      },
+      {
+        name: "Aditi Singh",
+        roles: ["Team Member"],
+        initials: "AS",
+        img: "assets/team-members/aditi-singh-img.JPG",
+        linkedin: "",
+        instagram: "",
+        email: "moksha.sae@iitgn.ac.in"
+      },
+      {
+        name: "Aditya Jain",
+        roles: ["Team Member"],
+        initials: "AJ",
+        img: "assets/team-members/aditya-jain-img.jpg",
+        linkedin: "",
+        instagram: "",
+        email: "moksha.sae@iitgn.ac.in"
+      },
+      {
+        name: "Apoorv Rane",
+        roles: ["Team Member"],
+        initials: "AR",
+        img: "assets/team-members/apoorv-rane-img.jpeg",
+        linkedin: "",
+        instagram: "",
+        email: "moksha.sae@iitgn.ac.in"
+      },
+      {
+        name: "Raghav Gopal Mudigonda",
+        roles: ["Team Member"],
+        initials: "RM",
+        img: "assets/team-members/rgmg-img.jpg",
+        linkedin: "",
+        instagram: "",
+        email: "moksha.sae@iitgn.ac.in"
+      },
+      {
+        name: "Raghavpravin K S",
+        roles: ["Team Member"],
+        initials: "RK",
+        img: "assets/team-members/raghavpravin-ks-img.jpg",
+        linkedin: "",
+        instagram: "",
+        email: "moksha.sae@iitgn.ac.in"
+      },
+      {
+        name: "Aditya Yadav",
+        roles: ["Team Member"],
+        initials: "AY",
+        img: "assets/team-members/adi-img.webp",
         linkedin: "",
         instagram: "",
         email: "moksha.sae@iitgn.ac.in"

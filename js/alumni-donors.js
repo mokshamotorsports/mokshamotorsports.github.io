@@ -13,7 +13,7 @@
 const alumniDonors = [
   {
     name: "Puneet Swami",
-    photo: "",
+    photo: "assets/alumni-donors/puneet-swami-img.png",
     linkedin: "https://www.linkedin.com/in/puneet-swami/",
     graduationYear: "2019",
     degree: "B.Tech Civil Engineering",
@@ -21,7 +21,7 @@ const alumniDonors = [
   },
   {
     name: "Akhilesh Ravi",
-    photo: "",
+    photo: "assets/alumni-donors/akhilesh-ravi-img.jpeg",
     linkedin: "https://www.linkedin.com/in/akhileshravi/",
     graduationYear: "2020",
     degree: "B.Tech Dual Major (CSE & EE)",
@@ -29,7 +29,7 @@ const alumniDonors = [
   },
   {
     name: "Saksham Singal",
-    photo: "",
+    photo: "assets/alumni-donors/saksham-singal-img.jpeg",
     linkedin: "https://www.linkedin.com/in/saksham-singal/",
     graduationYear: "2019",
     degree: "B.Tech Mechanical Engineering",
@@ -37,7 +37,7 @@ const alumniDonors = [
   },
   {
     name: "Ankit Agarwal",
-    photo: "",
+    photo: "assets/alumni-donors/ankit-agarwal-img.jpeg",
     linkedin: "https://www.linkedin.com/in/ankit-agarwal-a369257a/",
     graduationYear: "2017",
     degree: "B.Tech Mechanical Engineering",
@@ -45,7 +45,7 @@ const alumniDonors = [
   },
   {
     name: "Jaydeep Kakadiya",
-    photo: "",
+    photo: "assets/alumni-donors/jaydeep-kakadiya-img.jpeg",
     linkedin: "https://www.linkedin.com/in/jaydeep-kakadiya-4a5822171/",
     graduationYear: "2022",
     degree: "B.Tech Mechanical Engineering",
@@ -61,7 +61,7 @@ const alumniDonors = [
   },
   {
     name: "Saurav Nagar",
-    photo: "",
+    photo: "assets/alumni-donors/saurav-nagar-img.jpeg",
     linkedin: "https://www.linkedin.com/in/sauravnagar/",
     graduationYear: "2019",
     degree: "B.Tech Mechanical Engineering",
@@ -69,22 +69,34 @@ const alumniDonors = [
   },
   {
     name: "Rohit Singh",
-    photo: "",
-    linkedin: "",
-    graduationYear: "",
-    degree: "IIT Gandhinagar Alumnus",
+    photo: "assets/alumni-donors/rohit-singh-img.jpeg",
+    linkedin: "https://www.linkedin.com/in/rohitsinghiitgn/",
+    graduationYear: "2021",
+    degree: "B.Tech Mechanical Engineering",
     donation: 0
   }
 ];
 
 /**
- * Alumni Donation Target Configuration
+ * Alumni Donation Target Configuration & PDF Guide URL
  */
 const donationTarget = 200000; // Official alumni donation target: ₹2,00,000 (2 Lacs)
+const DONATION_GUIDE_URL = "https://drive.google.com/file/d/162gmyBS_CX5_yW4P5T1eKNewoj8fdeUn/view?usp=sharing"; // Official Google Drive PDF URL
 
 document.addEventListener('DOMContentLoaded', () => {
   renderAlumniDonorsPage();
+  initDonationGuide();
 });
+
+/**
+ * Binds donation guide URL to guide button if present on page
+ */
+function initDonationGuide() {
+  const guideBtn = document.getElementById('donationGuideBtn');
+  if (guideBtn && DONATION_GUIDE_URL) {
+    guideBtn.href = DONATION_GUIDE_URL;
+  }
+}
 
 /**
  * Calculates and formats the total aggregate contributions from alumni.
@@ -276,9 +288,9 @@ function createAlumniCardHtml(alumnus) {
     <article class="member-card alumni-card" aria-label="Alumnus ${name}">
       <div class="member-portrait-wrap">
         ${hasPhoto
-          ? `<img src="${photoUrl}" alt="${name}" class="member-portrait" loading="lazy" />`
-          : `<div class="monogram-tile"><span class="monogram-text">${initials}</span></div>`
-        }
+      ? `<img src="${photoUrl}" alt="${name}" class="member-portrait" loading="lazy" />`
+      : `<div class="monogram-tile"><span class="monogram-text">${initials}</span></div>`
+    }
         <div class="card-hover-border"></div>
       </div>
       <div class="member-info">

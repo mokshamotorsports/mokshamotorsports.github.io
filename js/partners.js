@@ -113,7 +113,7 @@ const tiersConfig = [
 
 const sponsorshipDeckConfig = {
   title: "Moksha Motorsports Sponsorship Deck",
-  file: "assets/moksha-motorsports-brochure.pdf",
+  file: "assets/Moksha_Motorsports_Brochure.pdf",
   downloadName: "Moksha_Motorsports_Sponsorship_Deck.pdf"
 };
 
