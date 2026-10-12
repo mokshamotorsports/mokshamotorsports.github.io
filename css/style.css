@@ -412,10 +412,12 @@ button {
     transform: translate(0, 0) scale(1);
     opacity: 0.75;
   }
+
   50% {
     transform: translate(-7vw, 10vh) scale(1.12);
     opacity: 0.95;
   }
+
   100% {
     transform: translate(-3vw, 18vh) scale(0.92);
     opacity: 0.70;
@@ -427,10 +429,12 @@ button {
     transform: translate(0, 0) scale(1);
     opacity: 0.70;
   }
+
   50% {
     transform: translate(9vw, -12vh) scale(1.15);
     opacity: 0.95;
   }
+
   100% {
     transform: translate(4vw, 6vh) scale(0.88);
     opacity: 0.65;
@@ -442,10 +446,12 @@ button {
     transform: translate(0, 0) scale(1);
     opacity: 0.75;
   }
+
   50% {
     transform: translate(-8vw, -14vh) scale(1.10);
     opacity: 1;
   }
+
   100% {
     transform: translate(-5vw, -5vh) scale(0.92);
     opacity: 0.70;
@@ -458,9 +464,11 @@ button {
     transform: translate3d(-15vw, -10vh, 0) rotate(-25deg);
     opacity: 0.15;
   }
+
   50% {
     opacity: 0.40;
   }
+
   100% {
     transform: translate3d(25vw, 18vh, 0) rotate(-25deg);
     opacity: 0.15;
@@ -472,9 +480,11 @@ button {
     transform: translate3d(20vw, 15vh, 0) rotate(-22deg);
     opacity: 0.12;
   }
+
   50% {
     opacity: 0.35;
   }
+
   100% {
     transform: translate3d(-20vw, -15vh, 0) rotate(-22deg);
     opacity: 0.12;
@@ -486,9 +496,11 @@ button {
     transform: translate3d(-10vw, -8vh, 0) rotate(-28deg);
     opacity: 0.15;
   }
+
   50% {
     opacity: 0.38;
   }
+
   100% {
     transform: translate3d(20vw, 14vh, 0) rotate(-28deg);
     opacity: 0.15;
@@ -497,6 +509,7 @@ button {
 
 /* Reduced Motion Fallback */
 @media (prefers-reduced-motion: reduce) {
+
   .blob-top-right,
   .blob-mid-left,
   .blob-bottom-right,
@@ -510,14 +523,17 @@ button {
   .ambient-flowing-gradients {
     filter: blur(65px);
   }
+
   .blob-top-right,
   .blob-mid-left,
   .blob-bottom-right {
     opacity: 0.55;
   }
+
   .ambient-speed-streaks {
     opacity: 0.6;
   }
+
   .ambient-tech-mesh {
     background-size: 50px 50px, 50px 50px, 100px 100px;
     opacity: 0.3;
@@ -570,12 +586,12 @@ button {
   inset: 0;
   z-index: 0;
   background-image:
-    linear-gradient(to bottom, 
-      rgba(0, 0, 0, 0.52) 0%, 
-      rgba(0, 0, 0, 0.20) 25%, 
-      rgba(0, 20, 46, 0.45) 55%, 
-      rgba(0, 20, 46, 0.75) 78%, 
-      rgba(223, 22, 70, 0.12) 90%, 
+    linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.52) 0%,
+      rgba(0, 0, 0, 0.20) 25%,
+      rgba(0, 20, 46, 0.45) 55%,
+      rgba(0, 20, 46, 0.75) 78%,
+      rgba(223, 22, 70, 0.12) 90%,
       #020813 100%),
     url('../assets/moksha-orientation.webp');
   background-position: center center;
@@ -1192,11 +1208,25 @@ button {
     transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), color 0.25s ease;
   }
 
-  .nav-mobile-menu.is-open .nav-link:nth-child(1) { transition-delay: 0.08s; }
-  .nav-mobile-menu.is-open .nav-link:nth-child(2) { transition-delay: 0.12s; }
-  .nav-mobile-menu.is-open .nav-link:nth-child(3) { transition-delay: 0.16s; }
-  .nav-mobile-menu.is-open .nav-link:nth-child(4) { transition-delay: 0.20s; }
-  .nav-mobile-menu.is-open .nav-link:nth-child(5) { transition-delay: 0.24s; }
+  .nav-mobile-menu.is-open .nav-link:nth-child(1) {
+    transition-delay: 0.08s;
+  }
+
+  .nav-mobile-menu.is-open .nav-link:nth-child(2) {
+    transition-delay: 0.12s;
+  }
+
+  .nav-mobile-menu.is-open .nav-link:nth-child(3) {
+    transition-delay: 0.16s;
+  }
+
+  .nav-mobile-menu.is-open .nav-link:nth-child(4) {
+    transition-delay: 0.20s;
+  }
+
+  .nav-mobile-menu.is-open .nav-link:nth-child(5) {
+    transition-delay: 0.24s;
+  }
 
   .nav-mobile-menu.is-closing .nav-link {
     opacity: 0;
@@ -1207,6 +1237,7 @@ button {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   .nav-mobile-menu,
   .nav-mobile-menu.is-open,
   .nav-mobile-menu .nav-link,
@@ -1612,6 +1643,7 @@ button {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   .sustainability-pillar,
   .pillar-accent-line,
   .sustainability-cinematic-img {
@@ -2018,9 +2050,30 @@ button {
 }
 
 .sponsor-wall-row-top,
-.sponsor-wall-row-2,
-.sponsor-wall-row-3 {
+.sponsor-wall-row-2 {
   gap: 6rem;
+}
+
+/* 3-Logo Top Row: Center Spark Minda precisely on the page horizontal axis */
+.sponsor-wall-row-3 {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  width: 100%;
+}
+
+.sponsor-wall-row-3 .sponsor-wall-item-left {
+  justify-self: end;
+  margin-right: 3.5rem;
+}
+
+.sponsor-wall-row-3 .sponsor-wall-item-center {
+  justify-self: center;
+}
+
+.sponsor-wall-row-3 .sponsor-wall-item-right {
+  justify-self: start;
+  margin-left: 3.5rem;
 }
 
 .sponsor-wall-item {
@@ -2040,18 +2093,30 @@ div.sponsor-wall-item {
   cursor: default;
 }
 
-/* Top Row (Major Donors): Spark Minda, GT — Prominent Scale */
+/* Top Row (Major Donors): GT, Spark Minda, Inter-Citi — Largest Scale */
 .sponsor-wall-row-top .sponsor-wall-logo,
 .sponsor-wall-row-2 .sponsor-wall-logo,
 .sponsor-wall-row-3 .sponsor-wall-logo {
-  max-height: 96px;
-  max-width: 280px;
+  max-height: 105px;
+  max-width: 300px;
   width: auto;
   height: auto;
   object-fit: contain;
   filter: none;
   opacity: 1;
   transition: filter 300ms ease, opacity 300ms ease, transform 300ms ease;
+}
+
+/* Dedicated sizing for Gujarat Tourism logo on homepage (+6pt) */
+.sponsor-wall-row-top .sponsor-wall-logo[src*="gt-logo"] {
+  max-height: calc(105px + 6pt);
+  border-radius: 8px;
+}
+
+/* Dedicated sizing for Spark Minda logo on homepage (+23pt) */
+.sponsor-wall-logo[src*="smf-logo"] {
+  max-height: calc(105px + 23pt);
+  max-width: 400px;
 }
 
 .sponsor-wall-row-top .sponsor-wall-text-logo,
@@ -2086,11 +2151,27 @@ div.sponsor-wall-item {
   transform: scale(1.45);
 }
 
+/* Dedicated styling for Inter-Citi Logistics logo on homepage (+6pt) */
+.sponsor-wall-logo[src*="inter-citi"] {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 8px 18px;
+  max-height: calc(72px + 6pt);
+  max-width: 290px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+  transition: transform 300ms ease, box-shadow 300ms ease;
+}
+
 /* Subtle Hover Interaction: full clarity + subtle drop-shadow glow */
 @media (hover: hover) {
   .sponsor-wall-item:hover .sponsor-wall-logo {
     filter: drop-shadow(0 4px 12px rgba(255, 255, 255, 0.25));
     opacity: 1;
+  }
+
+  .sponsor-wall-item:hover .sponsor-wall-logo[src*="inter-citi"] {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.25);
   }
 
   .sponsor-wall-item:hover .sponsor-wall-text-logo {
@@ -2114,11 +2195,32 @@ div.sponsor-wall-item {
     gap: 3rem;
   }
 
+  .sponsor-wall-row-3 .sponsor-wall-item-left {
+    margin-right: 1.75rem;
+  }
+
+  .sponsor-wall-row-3 .sponsor-wall-item-right {
+    margin-left: 1.75rem;
+  }
+
   .sponsor-wall-row-top .sponsor-wall-logo,
   .sponsor-wall-row-2 .sponsor-wall-logo,
   .sponsor-wall-row-3 .sponsor-wall-logo {
     max-height: 75px;
     max-width: 220px;
+  }
+
+  .sponsor-wall-logo[src*="smf-logo"] {
+    max-height: calc(75px + 23pt);
+    max-width: 295px;
+  }
+
+  .sponsor-wall-row-top .sponsor-wall-logo[src*="gt-logo"] {
+    max-height: calc(75px + 6pt);
+  }
+
+  .sponsor-wall-logo[src*="inter-citi"] {
+    max-height: calc(52px + 6pt);
   }
 
   .sponsor-wall-row-top .sponsor-wall-text-logo,
@@ -2133,7 +2235,7 @@ div.sponsor-wall-item {
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .partners-section {
     padding: 3.5rem 1rem 2rem 1rem;
   }
@@ -2151,6 +2253,41 @@ div.sponsor-wall-item {
     gap: 1.5rem 1.25rem;
   }
 
+  /* Responsive Top Tier: Spark Minda full-width on top, GT & Inter-Citi side-by-side underneath */
+  .sponsor-wall-row-3 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    gap: 1.5rem 1rem;
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+  }
+
+  .sponsor-wall-row-3 .sponsor-wall-item-center {
+    grid-column: 1 / -1;
+    order: 1;
+    width: 100%;
+    justify-self: center;
+    margin: 0;
+  }
+
+  .sponsor-wall-row-3 .sponsor-wall-item-left {
+    grid-column: 1;
+    order: 2;
+    justify-self: center;
+    margin: 0;
+  }
+
+  .sponsor-wall-row-3 .sponsor-wall-item-right {
+    grid-column: 2;
+    order: 3;
+    justify-self: center;
+    margin: 0;
+  }
+
+  /* Bottom Tier: 2x2 layout of the other 4 associate partners */
   .sponsor-wall-row-4 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -2185,6 +2322,24 @@ div.sponsor-wall-item {
     max-width: 160px;
     transform: scale(1.25);
   }
+
+  /* Spark Minda full-width prominent scale */
+  .sponsor-wall-logo[src*="smf-logo"] {
+    max-height: calc(62px + 23pt);
+    max-width: 300px;
+  }
+
+  /* GT & Inter-Citi slightly smaller scale in 2-up layout */
+  .sponsor-wall-row-top .sponsor-wall-logo[src*="gt-logo"] {
+    max-height: calc(44px + 6pt);
+    max-width: 56px;
+  }
+
+  .sponsor-wall-logo[src*="inter-citi"] {
+    max-height: calc(36px + 6pt);
+    max-width: 165px;
+    padding: 4px 10px;
+  }
 }
 
 /* ================================================================
@@ -2214,10 +2369,10 @@ div.sponsor-wall-item {
 
 .team-hero-bg {
   background-image:
-    linear-gradient(to bottom, 
-      rgba(0, 0, 0, 0.45) 0%, 
-      rgba(0, 20, 46, 0.3) 40%, 
-      rgba(0, 20, 46, 0.7) 75%, 
+    linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.45) 0%,
+      rgba(0, 20, 46, 0.3) 40%,
+      rgba(0, 20, 46, 0.7) 75%,
       #020813 100%),
     url('../assets/team-photo-2026-2.webp');
   background-position: 5% 35%;
@@ -2573,8 +2728,8 @@ div.sponsor-wall-item {
   overflow: hidden;
   will-change: transform, box-shadow, border-color;
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
-              box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
-              border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Portrait Wrap Container */
@@ -2738,7 +2893,7 @@ div.sponsor-wall-item {
   z-index: 1;
 }
 
-.partners-section + .team-contact-section,
+.partners-section+.team-contact-section,
 .home-page-wrapper .team-contact-section {
   margin-top: 1rem;
   padding-top: 1.5rem;
@@ -3210,10 +3365,10 @@ div.sponsor-wall-item {
 
 .partners-hero-bg {
   background-image:
-    linear-gradient(to bottom, 
-      rgba(0, 0, 0, 0.45) 0%, 
-      rgba(0, 20, 46, 0.3) 40%, 
-      rgba(0, 20, 46, 0.7) 75%, 
+    linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.45) 0%,
+      rgba(0, 20, 46, 0.3) 40%,
+      rgba(0, 20, 46, 0.7) 75%,
       #020813 100%),
     url('../assets/home-wwr.jpg');
   background-position: center center;
@@ -3559,7 +3714,6 @@ div.sponsor-wall-item {
 
 .grid-full,
 .powered-by-grid,
-.gold-sponsor-grid,
 .platinum-sponsor-grid {
   display: flex;
   justify-content: center;
@@ -3660,10 +3814,9 @@ div.sponsor-wall-item {
   }
 }
 
-/* Tier 03: GOLD SPONSOR (Metallic Gold #FFD700 Accent) */
+/* Tier 03: GOLD SPONSORS (Metallic Gold #FFD700 Accent) */
 .gold-sponsor-card {
   min-height: 230px;
-  max-width: 960px;
   width: 100%;
   margin: 0 auto;
   background: linear-gradient(135deg, #18140e 0%, #0a0805 100%);
@@ -3678,18 +3831,26 @@ div.sponsor-wall-item {
 }
 
 .partner-logo-img[src*="gt-logo"] {
-  max-height: 160px;
-  max-width: 90%;
-  transform: scale(1.3);
+  max-height: 125px;
+  max-width: 85%;
+  transform: scale(1.12);
   transition: transform 0.3s ease;
+}
+
+.partner-logo-img[src*="inter-citi"] {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 8px 18px;
+  max-height: 68px;
+  max-width: 82%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .gold-sponsor-card .placeholder-name {
   font-size: clamp(2.1rem, 4vw, 3.1rem);
   color: #FFD700;
 }
-
-
 
 .gold-sponsor-card .card-hover-border {
   position: absolute;
@@ -3717,12 +3878,18 @@ div.sponsor-wall-item {
   }
 
   .gold-sponsor-card:hover .partner-logo-img[src*="gt-logo"] {
-    transform: scale(1.38);
+    transform: scale(1.18);
+  }
+
+  .gold-sponsor-card:hover .partner-logo-img[src*="inter-citi"] {
+    transform: scale(1.06);
+    box-shadow: 0 6px 24px rgba(255, 215, 0, 0.28);
   }
 }
 
 /* Tier 04: ASSOCIATE PARTNERS (2x2 Centered Grid Layout - Electric Blue #00BBFF Accent) */
 .grid-2-up,
+.gold-sponsor-grid,
 .associate-partners-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -4043,6 +4210,7 @@ div.sponsor-wall-item {
   .grid-3-up,
   .technical-partners-grid,
   .grid-2-up,
+  .gold-sponsor-grid,
   .software-sponsors-grid,
   .grid-register,
   .past-sponsors-grid {
@@ -4059,6 +4227,7 @@ div.sponsor-wall-item {
   .grid-3-up,
   .technical-partners-grid,
   .grid-2-up,
+  .gold-sponsor-grid,
   .software-sponsors-grid,
   .grid-register,
   .past-sponsors-grid {
@@ -4421,10 +4590,10 @@ div.sponsor-wall-item {
 
 .about-hero-bg {
   background-image:
-    linear-gradient(to bottom, 
-      rgba(0, 0, 0, 0.45) 0%, 
-      rgba(0, 20, 46, 0.3) 40%, 
-      rgba(0, 20, 46, 0.75) 75%, 
+    linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.45) 0%,
+      rgba(0, 20, 46, 0.3) 40%,
+      rgba(0, 20, 46, 0.75) 75%,
       #020813 100%),
     url('../assets/who-we-are.png');
   background-position: center center;

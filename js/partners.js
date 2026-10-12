@@ -32,14 +32,19 @@ const tiersConfig = [
   },
   {
     id: "gold-sponsor",
-    title: "GOLD SPONSOR",
-    layout: "full",
+    title: "GOLD SPONSORS",
+    layout: "2-up",
     cardClass: "gold-sponsor-card",
     partners: [
       {
         name: "Gujarat Tourism",
         logo: "assets/gt-logo.png",
         website: "https://www.gujarattourism.com"
+      },
+      {
+        name: "Inter-Citi Logistics",
+        logo: "assets/inter-citi-logo.png",
+        website: "https://inter-citi.com/"
       }
     ]
   },
@@ -67,7 +72,7 @@ const tiersConfig = [
       {
         name: "Maker Bhavan",
         logo: "assets/AMKER BHAVAN.png",
-        website: "https://iitgn.ac.in"
+        website: "https://makerbhavan.iitgn.ac.in/wp/"
       }
     ]
   },
