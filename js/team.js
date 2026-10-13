@@ -25,7 +25,7 @@ const teamsData = {
         img: "assets/team-members/prof-madhu.webp",
         linkedin: "",
         instagram: "",
-        email: "mvadali@iitgn.ac.in"
+        email: "madhu.vadali@iitgn.ac.in"
       }
     ],
     coreTeam: [
@@ -36,7 +36,7 @@ const teamsData = {
         img: "assets/team-members/adi-img.webp",
         linkedin: "https://in.linkedin.com/company/moksha-motorsports",
         instagram: "https://www.instagram.com/moksha.motorsports/",
-        email: "moksha.sae@iitgn.ac.in"
+        email: "aditya.yadav@iitgn.ac.in"
       },
       {
         name: "Rishi Pinara",
@@ -45,7 +45,7 @@ const teamsData = {
         img: "assets/team-members/rishi-img.webp",
         linkedin: "https://in.linkedin.com/company/moksha-motorsports",
         instagram: "https://www.instagram.com/moksha.motorsports/",
-        email: "moksha.sae@iitgn.ac.in"
+        email: "rishi.pinara@iitgn.ac.in"
       },
       {
         name: "Pratham Wala",
@@ -54,7 +54,7 @@ const teamsData = {
         img: "assets/team-members/pratham-img.webp",
         linkedin: "https://in.linkedin.com/company/moksha-motorsports",
         instagram: "https://www.instagram.com/moksha.motorsports/",
-        email: "moksha.sae@iitgn.ac.in"
+        email: "pratham.wala@iitgn.ac.in"
       },
       {
         name: "Pradnyesh Phadnis",
@@ -63,7 +63,7 @@ const teamsData = {
         img: "assets/team-members/prady-img.webp",
         linkedin: "",
         instagram: "",
-        email: "moksha.sae@iitgn.ac.in"
+        email: "pradnyesh.phadnis@iitgn.ac.in"
       },
       {
         name: "Naitik Patel",
@@ -72,7 +72,7 @@ const teamsData = {
         img: "assets/team-members/naitik-img.webp",
         linkedin: "",
         instagram: "",
-        email: "moksha.sae@iitgn.ac.in"
+        email: "naitik.patel@iitgn.ac.in"
       },
       {
         name: "Kush Mehta",
@@ -81,7 +81,7 @@ const teamsData = {
         img: "assets/team-members/kush-img.webp",
         linkedin: "",
         instagram: "",
-        email: "moksha.sae@iitgn.ac.in"
+        email: "kush.mehta@iitgn.ac.in"
       },
       {
         name: "Viraat Krishna",
@@ -90,7 +90,7 @@ const teamsData = {
         img: "assets/team-members/viraat-img.webp",
         linkedin: "",
         instagram: "",
-        email: "moksha.sae@iitgn.ac.in"
+        email: "24110016@iitgn.ac.in"
       },
       {
         name: "Vansh",
@@ -108,7 +108,7 @@ const teamsData = {
         img: "assets/team-members/monisha-img.webp",
         linkedin: "",
         instagram: "",
-        email: "moksha.sae@iitgn.ac.in"
+        email: "kavuri.monisha@iitgn.ac.in"
       },
       {
         name: "Dhruv Meshram",
@@ -121,16 +121,6 @@ const teamsData = {
       }
     ],
     remainingTeam: [
-
-      {
-        name: "Anant Shukla",
-        roles: ["Chassis"],
-        initials: "AS",
-        img: "assets/team-members/anant-img.webp",
-        linkedin: "",
-        instagram: "",
-        email: "moksha.sae@iitgn.ac.in"
-      },
       {
         name: "Dakshita Gupta",
         roles: ["Team Member"],
@@ -138,7 +128,7 @@ const teamsData = {
         img: "assets/team-members/dakshita-img.webp",
         linkedin: "",
         instagram: "",
-        email: "moksha.sae@iitgn.ac.in"
+        email: "dakshita.gupta@iitgn.ac.in"
       },
       {
         name: "Dhruval Naik",
@@ -147,16 +137,7 @@ const teamsData = {
         img: "assets/team-members/dhruval-img.webp",
         linkedin: "",
         instagram: "",
-        email: "moksha.sae@iitgn.ac.in"
-      },
-      {
-        name: "Harsh",
-        roles: ["Team Member"],
-        initials: "H",
-        img: "assets/team-members/harsh-img.webp",
-        linkedin: "",
-        instagram: "",
-        email: "moksha.sae@iitgn.ac.in"
+        email: "dhruval.naik@iitgn.ac.in"
       },
       {
         name: "Keshav Sharma",
@@ -165,7 +146,7 @@ const teamsData = {
         img: "assets/team-members/keshav-img.webp",
         linkedin: "",
         instagram: "",
-        email: "moksha.sae@iitgn.ac.in"
+        email: "keshavsharma@iitgn.ac.in"
       },
       {
         name: "Manan Vaghela",
@@ -174,7 +155,7 @@ const teamsData = {
         img: "assets/team-members/manan-img.webp",
         linkedin: "",
         instagram: "",
-        email: "moksha.sae@iitgn.ac.in"
+        email: "manan.vaghela@iitgn.ac.in"
       },
       {
         name: "Niv Mehta",
@@ -183,7 +164,7 @@ const teamsData = {
         img: "assets/team-members/niv-img.webp",
         linkedin: "",
         instagram: "",
-        email: "moksha.sae@iitgn.ac.in"
+        email: "mehta.niv@iitgn.ac.in"
       },
       {
         name: "Om Malusare",
@@ -192,7 +173,7 @@ const teamsData = {
         img: "assets/team-members/om-m-img.webp",
         linkedin: "",
         instagram: "",
-        email: "moksha.sae@iitgn.ac.in"
+        email: "om.malusare@iitgn.ac.in"
       },
       {
         name: "Om Pawar",
@@ -201,16 +182,16 @@ const teamsData = {
         img: "assets/team-members/om-p-img.webp",
         linkedin: "",
         instagram: "",
-        email: "moksha.sae@iitgn.ac.in"
+        email: "om.pawar@iitgn.ac.in"
       },
       {
-        name: "Pranjal",
+        name: "Pranjal Chaudhary",
         roles: ["Team Member"],
-        initials: "P",
+        initials: "PC",
         img: "assets/team-members/pranjal-img.webp",
         linkedin: "",
         instagram: "",
-        email: "moksha.sae@iitgn.ac.in"
+        email: "pranjalchaudhary@iitgn.ac.in"
       },
       {
         name: "Rajvansh",
@@ -219,7 +200,7 @@ const teamsData = {
         img: "assets/team-members/rajvansh-img.webp",
         linkedin: "",
         instagram: "",
-        email: "moksha.sae@iitgn.ac.in"
+        email: "r.agarwal@iitgn.ac.in"
       },
       {
         name: "Rishi Kantharia",
@@ -228,7 +209,7 @@ const teamsData = {
         img: "assets/team-members/rishi-k-img.webp",
         linkedin: "",
         instagram: "",
-        email: "moksha.sae@iitgn.ac.in"
+        email: "rishi.kantharia@iitgn.ac.in"
       }
     ]
   },
@@ -252,7 +233,7 @@ const teamsData = {
         img: "assets/team-members/prof-madhu.webp",
         linkedin: "",
         instagram: "",
-        email: "mvadali@iitgn.ac.in"
+        email: "madhu.vadali@iitgn.ac.in"
       }
     ],
     coreTeam: [
@@ -308,7 +289,7 @@ const teamsData = {
         img: "assets/team-members/monisha-img.webp",
         linkedin: "",
         instagram: "",
-        email: "moksha.sae@iitgn.ac.in"
+        email: "kavuri.monisha@iitgn.ac.in"
       },
       {
         name: "Aditi Singh",
@@ -505,7 +486,7 @@ const teamsData = {
         img: "assets/team-members/prof-madhu.webp",
         linkedin: "",
         instagram: "",
-        email: "mvadali@iitgn.ac.in"
+        email: "madhu.vadali@iitgn.ac.in"
       }
     ],
     coreTeam: [
@@ -867,8 +848,6 @@ function createMemberCardHtml(member, cardClass = '') {
           ${rolesHtml}
         </div>
         <div class="member-socials">
-          ${linkedinHtml}
-          ${instagramHtml}
           ${emailHtml}
         </div>
       </div>
