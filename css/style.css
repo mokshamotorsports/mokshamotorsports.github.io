@@ -4215,6 +4215,81 @@ div.sponsor-wall-item {
   .partner-cta-card {
     padding: 3rem 2rem;
   }
+
+  /* Tier 01 & 02: Institutional Supporter & Platinum Sponsor */
+  .powered-by-card,
+  .platinum-sponsor-card {
+    min-height: 250px;
+  }
+
+  .powered-by-card .partner-logo-img {
+    max-height: 120px;
+    max-width: 85%;
+  }
+
+  .platinum-sponsor-card .partner-logo-img {
+    max-height: 120px;
+    max-width: 88%;
+  }
+
+  /* Tier 03: Gold Sponsors */
+  .gold-sponsor-card {
+    min-height: 215px;
+  }
+
+  .gold-sponsor-card .partner-logo-img[src*="gt-logo"] {
+    max-height: 108px;
+    max-width: 80%;
+    transform: scale(1.08);
+  }
+
+  .gold-sponsor-card .partner-logo-img[src*="inter-citi"] {
+    max-height: 94px;
+    max-width: 86%;
+    padding: 9px 20px;
+  }
+
+  /* Tier 04: Associate Partners */
+  .associate-partner-card {
+    min-height: 175px;
+  }
+
+  .associate-partner-card .partner-logo-area {
+    min-height: 70px;
+  }
+
+  .associate-partner-card .partner-logo-img {
+    max-height: 62px;
+    max-width: 75%;
+  }
+
+  .associate-partner-card .partner-logo-img[src*="ds-logo"] {
+    max-height: 90px;
+    max-width: 85%;
+    transform: scale(1.25);
+  }
+
+  /* Tier 05: Past Sponsors */
+  .past-sponsor-card {
+    min-height: 155px;
+  }
+
+  .past-sponsor-card .partner-logo-area {
+    min-height: 60px;
+  }
+
+  .past-sponsor-card .partner-logo-img {
+    max-height: 50px;
+    max-width: 70%;
+  }
+
+  .past-sponsor-card .partner-logo-img[src*="ashok-leyland"],
+  .past-sponsor-card .partner-logo-img[src*="ASHOK"],
+  .past-sponsor-card .partner-logo-img[src*="autodesk"] {
+    max-height: 70px;
+    max-width: 80%;
+    transform: scale(1.15);
+  }
 }
 
 @media (max-width: 640px) {
@@ -4229,14 +4304,6 @@ div.sponsor-wall-item {
     grid-template-columns: 1fr;
   }
 
-  .title-sponsor-card {
-    min-height: 260px;
-  }
-
-  .platinum-sponsor-card {
-    min-height: 200px;
-  }
-
   .cta-actions {
     flex-direction: column;
     align-items: flex-start;
@@ -4245,6 +4312,169 @@ div.sponsor-wall-item {
   .cta-btn {
     width: 100%;
     justify-content: center;
+  }
+
+  /* Tier 01 & 02: Institutional Supporter & Platinum Sponsor */
+  .powered-by-card,
+  .platinum-sponsor-card {
+    min-height: 220px;
+  }
+
+  .powered-by-card .partner-tile-inner,
+  .platinum-sponsor-card .partner-tile-inner {
+    padding: 2rem 1.25rem 1.75rem;
+  }
+
+  .powered-by-card .partner-logo-area,
+  .platinum-sponsor-card .partner-logo-area {
+    min-height: 110px;
+  }
+
+  .powered-by-card .partner-logo-img {
+    max-height: 105px;
+    max-width: 80%;
+  }
+
+  .platinum-sponsor-card .partner-logo-img {
+    max-height: 105px;
+    max-width: 90%;
+  }
+
+  .powered-by-card .partner-tag,
+  .platinum-sponsor-card .partner-tag {
+    font-size: 1.05rem;
+  }
+
+  /* Tier 03: Gold Sponsors */
+  .gold-sponsor-card {
+    min-height: 190px;
+  }
+
+  .gold-sponsor-card .partner-tile-inner {
+    padding: 1.75rem 1.25rem 1.5rem;
+  }
+
+  .gold-sponsor-card .partner-logo-area {
+    min-height: 90px;
+    padding: 0.5rem;
+  }
+
+  .gold-sponsor-card .partner-logo-img[src*="gt-logo"] {
+    max-height: 85px;
+    max-width: 78%;
+    transform: scale(1.05);
+  }
+
+  .gold-sponsor-card .partner-logo-img[src*="inter-citi"] {
+    max-height: 76px;
+    max-width: 84%;
+    padding: 7px 16px;
+    border-radius: 10px;
+  }
+
+  .gold-sponsor-card .partner-tag {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+
+  /* Tier 04: Associate Partners */
+  .associate-partner-card {
+    min-height: 150px;
+  }
+
+  .associate-partner-card .partner-tile-inner {
+    padding: 1.35rem 1rem 1.15rem;
+  }
+
+  .associate-partner-card .partner-logo-area {
+    min-height: 60px;
+    padding: 0.25rem;
+  }
+
+  .associate-partner-card .partner-logo-img {
+    max-height: 52px;
+    max-width: 68%;
+  }
+
+  .associate-partner-card .partner-logo-img[src*="ds-logo"] {
+    max-height: 70px;
+    max-width: 78%;
+    transform: scale(1.15);
+  }
+
+  .associate-partner-card .partner-tag {
+    font-size: 0.9rem;
+    margin-top: 0.75rem;
+  }
+
+  /* Tier 05: Past Sponsors */
+  .past-sponsor-card {
+    min-height: 130px;
+  }
+
+  .past-sponsor-card .partner-tile-inner {
+    padding: 1.15rem 0.85rem 0.95rem;
+  }
+
+  .past-sponsor-card .partner-logo-area {
+    min-height: 48px;
+    padding: 0.25rem;
+  }
+
+  .past-sponsor-card .partner-logo-img {
+    max-height: 40px;
+    max-width: 60%;
+  }
+
+  .past-sponsor-card .partner-logo-img[src*="ashok-leyland"],
+  .past-sponsor-card .partner-logo-img[src*="ASHOK"],
+  .past-sponsor-card .partner-logo-img[src*="autodesk"] {
+    max-height: 52px;
+    max-width: 72%;
+    transform: scale(1.1);
+  }
+
+  .past-sponsor-card .partner-tag {
+    font-size: 0.82rem;
+    margin-top: 0.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .powered-by-card .partner-logo-img {
+    max-height: 95px;
+  }
+
+  .platinum-sponsor-card .partner-logo-img {
+    max-height: 95px;
+    max-width: 92%;
+  }
+
+  .gold-sponsor-card .partner-logo-img[src*="gt-logo"] {
+    max-height: 78px;
+  }
+
+  .gold-sponsor-card .partner-logo-img[src*="inter-citi"] {
+    max-height: 68px;
+    padding: 6px 14px;
+  }
+
+  .associate-partner-card .partner-logo-img {
+    max-height: 46px;
+  }
+
+  .associate-partner-card .partner-logo-img[src*="ds-logo"] {
+    max-height: 62px;
+  }
+
+  .past-sponsor-card .partner-logo-img {
+    max-height: 35px;
+  }
+
+  .past-sponsor-card .partner-logo-img[src*="ashok-leyland"],
+  .past-sponsor-card .partner-logo-img[src*="ASHOK"],
+  .past-sponsor-card .partner-logo-img[src*="autodesk"] {
+    max-height: 46px;
   }
 }
 
