@@ -234,7 +234,7 @@ function createPartnerTileHtml(partner, cardClass = '', isPast = false) {
 
   if (hasUrl && !isPast) {
     return `
-      <a href="${escapeHtml(partner.website)}" target="_blank" rel="noopener noreferrer" class="partner-card ${cardClass}" aria-label="Visit ${escapeHtml(partner.name)} website">
+      <a href="${escapeHtml(partner.website)}" target="_blank" rel="noopener noreferrer" class="partner-card ${cardClass}" aria-label="Visit ${escapeHtml(partner.name)} website" style="${partner.name === 'Balaji Wires' ? 'grid-column: 1 / -1; justify-self: center; width: min(100%, 570px);' : ''}">
         ${tileInner}
       </a>
     `;
