@@ -217,7 +217,7 @@ function createPartnerTileHtml(partner, cardClass = '', isPast = false) {
     <div class="partner-tile-inner">
       <div class="partner-logo-area">
         ${hasLogo
-      ? `<img src="${escapeHtml(partner.logo)}" alt="${escapeHtml(partner.name)} Logo" class="partner-logo-img"${partner.name == 'Balaji Wires' ? 'balaji-wires.logo' : ''}" loading="lazy" />`
+      ? `<img src="${escapeHtml(partner.logo)}" alt="${escapeHtml(partner.name)} Logo" class="partner-logo-img ${partner.name == 'Balaji Wires' ? 'balaji-wires.logo' : ''}" loading="lazy" />`
       : `<div class="partner-placeholder-tile">
               <span class="placeholder-name">${escapeHtml(partner.name)}</span>
               <span class="placeholder-badge">// LOGO PLACEHOLDER</span>
