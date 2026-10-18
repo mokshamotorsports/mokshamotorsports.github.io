@@ -6428,27 +6428,3 @@ div.sponsor-wall-item {
   }
 }
 
-/* Balaji Wires: centred placard */
-.tier-grid.associate-partners-grid > .partner-card:has(.balaji-wires-logo) {
-  grid-column: 1 / -1;
-  justify-self: center;
-  width: min(100%, 570px);
-}
-
-/* Balaji Wires: larger logo */
-.partner-logo-area:has(.balaji-wires-logo) {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  overflow: visible;
-}
-
-.partner-logo-img.balaji-wires-logo {
-  width: 360px !important;
-  max-width: 90% !important;
-  height: 150px !important;
-  object-fit: contain;
-  transform: scale(1.2);
-  transform-origin: center;
-}
