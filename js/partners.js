@@ -73,7 +73,12 @@ const tiersConfig = [
         name: "Maker Bhavan",
         logo: "assets/AMKER BHAVAN.png",
         website: "https://makerbhavan.iitgn.ac.in/wp/"
-      }
+      },
+       {
+          name: "Balaji Wires",
+        logo: "assets/balaji-wires-logo.png",
+        website: "https://www.balajiwires.com",
+       }
     ]
   },
   {
