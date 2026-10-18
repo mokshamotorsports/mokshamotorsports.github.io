@@ -4382,12 +4382,18 @@ div.sponsor-wall-item {
     min-height: 150px;
   }
 
-   /* Centre the Balaji Wires placard */
+  /* Centre the Balaji Wires placard */
 .partner-card.associate-partner-card:has(.balaji-wires-logo) {
   grid-column: 1 / -1;
   justify-self: center;
   width: min(100%, 570px);
-   }
+}
+
+/* Enlarge only the Balaji Wires logo */
+.balaji-wires-logo {
+  transform: scale(1.5);
+  transform-origin: center;
+}
 
   .associate-partner-card .partner-tile-inner {
     padding: 1.35rem 1rem 1.15rem;
