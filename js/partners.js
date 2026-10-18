@@ -77,7 +77,7 @@ const tiersConfig = [
        {
           name: "Balaji Wires",
         logo: "assets/balaji-wires-logo.png",
-        website: "https://www.balajiwires.com",
+        website: "http://balajiwires.in/",
        }
     ]
   },
