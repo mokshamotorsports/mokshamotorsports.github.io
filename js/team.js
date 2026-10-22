@@ -131,15 +131,6 @@ const teamsData = {
         email: "dakshita.gupta@iitgn.ac.in"
       },
       {
-        name: "Dhruval Naik",
-        roles: ["Finance"],
-        initials: "DN",
-        img: "assets/team-members/dhruval-img.webp",
-        linkedin: "",
-        instagram: "",
-        email: "dhruval.naik@iitgn.ac.in"
-      },
-      {
         name: "Keshav Sharma",
         roles: ["Team Member"],
         initials: "KS",
